@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof window.cordova.plugins.locationManager != 'undefined') {
+          Vue.prototype.$vha.ibeacon = window.cordova.plugins.locationManager
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-ibeacon undefined"
         }
       }
       catch (err) {

@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof window.zip != 'undefined') {
+          Vue.prototype.$vha.zip = window.zip
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-zip undefined"
         }
       }
       catch (err) {

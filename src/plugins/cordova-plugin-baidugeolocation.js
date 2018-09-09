@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof window.baidumap_location != 'undefined') {
+          Vue.prototype.$vha.baidugeolocation = window.baidumap_location
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-baidumaplocation undefined"
         }
       }
       catch (err) {

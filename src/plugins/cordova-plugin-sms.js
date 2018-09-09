@@ -1,14 +1,17 @@
-exports.install = function (Vue, options, cb) {
-  document.addEventListener('deviceready', () => {
-
-    if (typeof window.sms === 'undefined') {
-      return cb(false)
-    }
-
-    // pass through the sms object
-    Vue.cordova.sms = window.sms
-
-    return cb(true)
-
-  }, false)
+const vha = {
+  install(Vue, options) {
+    document.addEventListener('deviceready', () => {
+      try {
+        if (typeof window.sms != 'undefined') {
+          Vue.prototype.$vha.sms = window.sms
+        } else {
+          throw "cordova-sms-plugin undefined"
+        }
+      }
+      catch (err) {
+        console.log(err, err.message)
+      }
+    }, false)
+  }
 }
+export default vha

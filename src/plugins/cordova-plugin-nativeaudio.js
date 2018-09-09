@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof window.plugins.NativeAudio != 'undefined') {
+          Vue.prototype.$vha.nativeaudio = window.plugins.NativeAudio
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-nativeaudio undefined"
         }
       }
       catch (err) {

@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof cordova.plugins.barcodeScanner != 'undefined') {
+          Vue.prototype.$vha.barcodescanner = cordova.plugins.barcodeScanner
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "phonegap-plugin-barcodescanner undefined"
         }
       }
       catch (err) {

@@ -1,29 +1,17 @@
-exports.install = function (Vue, options, cb) {
-  document.addEventListener('deviceready', () => {
-
-    if (typeof device === 'undefined' || typeof device.cordova === 'undefined') {
-      return cb(false)
-    }
-
-    // default values
-    Vue.cordova.device = {
-      cordova: null,
-      model: null,
-      platform: null,
-      uuid: null,
-      version: null,
-      manufacturer: null,
-      isVirtual: null,
-      serial: null
-    }
-
-    Object.keys(Vue.cordova.device).forEach(key => {
-      if (typeof device[key] !== 'undefined') {
-        Vue.cordova.device[key] = device[key]
+const vha = {
+  install(Vue, options) {
+    document.addEventListener('deviceready', () => {
+      try {
+        if (typeof window.device != 'undefined') {
+          Vue.prototype.$vha.device = window.device
+        } else {
+          throw "cordova-plugin-device undefined"
+        }
       }
-    })
-
-    return cb(true)
-
-  }, false)
+      catch (err) {
+        console.log(err, err.message)
+      }
+    }, false)
+  }
 }
+export default vha

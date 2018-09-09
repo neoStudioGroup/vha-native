@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof ProgressIndicator != 'undefined') {
+          Vue.prototype.$vha.progress = ProgressIndicator
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-progress undefined"
         }
       }
       catch (err) {

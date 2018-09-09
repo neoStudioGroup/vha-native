@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof datePicker != 'undefined') {
+          Vue.prototype.$vha.datepicker = datePicker
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-datepicker undefined"
         }
       }
       catch (err) {

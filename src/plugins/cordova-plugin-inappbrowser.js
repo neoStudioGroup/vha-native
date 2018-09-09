@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof cordova.InAppBrowser != 'undefined') {
+          Vue.prototype.$vha.inappbrowser = cordova.InAppBrowser
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-inappbrowser undefined"
         }
       }
       catch (err) {

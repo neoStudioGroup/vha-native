@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof navigator.notification != 'undefined') {
+          Vue.prototype.$vha.dialogs = navigator.notification
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-dialogs undefined"
         }
       }
       catch (err) {

@@ -1,14 +1,17 @@
-exports.install = function (Vue, options, cb) {
-  document.addEventListener('deviceready', () => {
-
-    if (typeof navigator.camera === 'undefined') {
-      return cb(false)
-    }
-
-    // pass through the camera object
-    Vue.cordova.camera = navigator.camera
-
-    return cb(true)
-
-  }, false)
+const vha = {
+  install(Vue, options) {
+    document.addEventListener('deviceready', () => {
+      try {
+        if (typeof navigator.camera != 'undefined') {
+          Vue.prototype.$vha.camera = navigator.camera
+        } else {
+          throw "cordova-plugin-camera undefined"
+        }
+      }
+      catch (err) {
+        console.log(err, err.message)
+      }
+    }, false)
+  }
 }
+export default vha

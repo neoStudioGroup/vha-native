@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof window.ble != 'undefined') {
+          Vue.prototype.$vha.bluetooth = window.ble
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-ble-central undefined"
         }
       }
       catch (err) {

@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof navigator.accelerometer != 'undefined') {
+          Vue.prototype.$vha.devicemotion = navigator.accelerometer
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-device-motion undefined"
         }
       }
       catch (err) {

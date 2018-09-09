@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof window.Keyboard != 'undefined') {
+          Vue.prototype.$vha.keyboard = window.Keyboard
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-keyboard undefined"
         }
       }
       catch (err) {

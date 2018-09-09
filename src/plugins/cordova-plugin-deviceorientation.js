@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof navigator.compass != 'undefined') {
+          Vue.prototype.$vha.deviceorientation = navigator.compass
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-device-orientation undefined"
         }
       }
       catch (err) {

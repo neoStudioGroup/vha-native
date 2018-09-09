@@ -1,21 +1,21 @@
-"prepublish": "npm run build"
 
-```
-基于[vue-cordova](https://github.com/kartsims/vue-cordova)的扩展版并翻译了一些常用插件
-直接调用也可以 封装起来更统一一些而且不用处理设备状态 vCordova中文文档
-```
-[vue-cordova](https://github.com/kartsims/vue-cordova)
+
+翻译了一些常用插件
+统一或直接调用cordova插件。vha-native中文文档
+
+
+
+[vha-native](https://github.com/neoStudioGroup/vha-native)
 
 [Vue.js](https://vuejs.org/) plugin for [Cordova](https://cordova.apache.org/)
 
-> Note : Compatible with every version of VueJS (1.x and 2.x)
 
 # How to use
 
 Add the NPM package to your project
 
 ```shell
-npm install --save vue-cordova
+npm install --save vha-native
 ```
 
 Add the plugin to your Vue instance according to your setup
@@ -23,29 +23,32 @@ Add the plugin to your Vue instance according to your setup
 ```javascript
 // CommonJS
 var Vue = require('vue');
-var VueCordova = require('vue-cordova');
-Vue.use(VueCordova);
+var VueNative = require('vha-native');
+Vue.use(VueNative);
 
 // import
 import Vue from 'vue'
-import VueCordova from 'vue-cordova'
-Vue.use(VueCordova)
+import VueNative from 'vha-native'
+Vue.use(VueNative)
 ```
 
 The package provides a global object `Vue.cordova`
 
 ```javascript
-console.log(Vue.cordova);
+console.log(this.$vha)
 ```
 
-This object provides API for the following [events](#events) and will hold the Cordova [plugins](#plugins) API objects you might be using.
+<!-- This object provides API for the following [events](#events) and will hold the Cordova [plugins](#plugins) API objects you might be using. -->
 
 > **This library is a syntax helper.** It provides an easier access to the global variables defined by Cordova.
 
 ### Demo
 
-A repository with a [full working demo](https://github.com/kartsims/vue-cordova-demo) is available to help you bootstrap a new project or cherry-pick working code.
+A repository with a [full working demo](https://github.com/neoStudioGroup/vha-appDemo) is available to help you bootstrap a new project or cherry-pick working code.
 
-### Documentation
+<!-- ### Documentation -->
 
-For more information, check out [http://kartsims.github.io/vue-cordova](http://kartsims.github.io/vue-cordova)
+<!-- For more information, check out [http://kartsims.github.io/vha-native](http://kartsims.github.io/vha-native) -->
+
+
+Thanks vue-cordova ngCordova

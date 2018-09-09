@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.geolocation != 'undefined') {
-          Vue.prototype.$vha.geolocation = navigator.geolocation
+        if (typeof window.plugins.flashlight != 'undefined') {
+          Vue.prototype.$vha.flashlight = window.plugins.flashlight
         } else {
-          throw "cordova-plugin-geolocation undefined"
+          throw "cordova-plugin-flashlight undefined"
         }
       }
       catch (err) {
