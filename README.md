@@ -15,7 +15,7 @@
 Add the NPM package to your project
 
 ```shell
-npm install --save vha-native
+npm install vha-native --save
 ```
 
 Add the plugin to your Vue instance according to your setup
