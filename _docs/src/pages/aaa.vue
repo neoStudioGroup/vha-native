@@ -3,7 +3,7 @@
 
   // UI组件-名称
   ._UI-name
-    background-color red
+    background-color white
 
 </style>
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
@@ -14,6 +14,7 @@
     <div class="_UI-name">
       222222
     </div>
+    <router-link to="/">1111</router-link>
 
   </div>
 </template>

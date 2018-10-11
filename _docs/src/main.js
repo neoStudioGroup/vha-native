@@ -10,6 +10,17 @@ Vue.use(Antd)
 import axios from 'axios'
 Vue.prototype.$ajax = axios
 
+
+import NProgress from "nprogress"
+import "nprogress/nprogress.css"
+router.beforeEach((to,from,next) => {
+  NProgress.start()
+  next()
+})
+router.afterEach(() => {
+  NProgress.done()
+})
+
 Vue.config.productionTip = false
 new Vue({
   router,
