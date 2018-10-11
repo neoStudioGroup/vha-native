@@ -17,6 +17,8 @@
     <router-link to="/aaa">2222</router-link>
     <i class="fa fa-camera-retro fa-5x"></i>
 
+    <a-button type="primary">Primary</a-button>
+
   </div>
 </template>
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
