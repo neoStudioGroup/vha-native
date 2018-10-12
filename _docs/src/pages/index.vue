@@ -317,6 +317,144 @@ export default {
   },
   mounted() {
     //挂载实例后 - this.el存在
+    
+      
+      
+	let loadCssCode = function (code){
+	    var style = document.createElement('style');
+	    style.type = 'text/css';
+	    style.rel = 'stylesheet';
+	    //for Chrome Firefox Opera Safari
+	    style.appendChild(document.createTextNode(code));
+	    //for IE
+	    //style.styleSheet.cssText = code;
+	    var head = document.getElementsByTagName('head')[0];
+	    head.appendChild(style);
+	}
+  loadCssCode(`
+    ._clear-a,
+    ._PG-index ._UI-leftList .ui-l-item li a {
+      text-decoration: none;
+    }
+    ._clear-a:link,
+    ._PG-index ._UI-leftList .ui-l-item li a:link {
+      color: #000;
+    }
+    ._clear-a:visited,
+    ._PG-index ._UI-leftList .ui-l-item li a:visited {
+      color: #000;
+    }
+    ._clear-a:hover,
+    ._PG-index ._UI-leftList .ui-l-item li a:hover {
+      color: #000;
+    }
+    ._clear-a:active,
+    ._PG-index ._UI-leftList .ui-l-item li a:active {
+      color: #000;
+    }
+    ._PG-index {
+      height: 100%;
+    }
+    ._PG-index * {
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+    ._PG-index .ui-l-item::-webkit-scrollbar-track-piece {
+      background-color: transparent;
+    }
+    ._PG-index ._UI-leftList {
+      width: 240px;
+      border-right: 1px solid #eee;
+      background-color: #fbfbfb;
+    }
+    ._PG-index ._UI-leftList .ui-l-title {
+      cursor: pointer;
+      padding: 0 20px;
+      height: 60px;
+      background: url(/vha-native/img/cloud-bg.45ab513c.png) no-repeat scroll 0% bottom;
+      background-color: /*Tstart-mainCl*/ #03a6ff /*Tend-mainCl*/;
+      -webkit-box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.1);
+              box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.1);
+    }
+    ._PG-index ._UI-leftList .ui-l-title span {
+      margin-left: 8px;
+      font-size: 1.6em;
+    }
+    ._PG-index ._UI-leftList .ui-l-search input {
+      padding: 13px;
+      border: none;
+      width: 100%;
+      font-weight: 600;
+      color: #000;
+      font-size: 1.1em;
+      border-left: 5px solid #fff;
+      border-bottom: 1px solid #eee;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      background-color: #fff;
+    }
+    ._PG-index ._UI-leftList .ui-l-search input:focus {
+      border-left: 5px solid /*Tstart-mainCl*/ #03a6ff /*Tend-mainCl*/;
+    }
+    ._PG-index ._UI-leftList .ui-l-color {
+      padding: 20px;
+    }
+    ._PG-index ._UI-leftList .ui-l-color div {
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+      border-radius: 3px;
+      border: 2px solid #fff;
+      -webkit-box-shadow: 0 0 0 1px #ddd;
+              box-shadow: 0 0 0 1px #ddd;
+      -webkit-box-sizing: content-box;
+              box-sizing: content-box;
+    }
+    ._PG-index ._UI-leftList .ui-l-item {
+      padding: 20px 0;
+    }
+    ._PG-index ._UI-leftList .ui-l-item .ui-l-i-title {
+      margin: 8px 20px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #888;
+    }
+    ._PG-index ._UI-leftList .ui-l-item li a {
+      padding: 4px 26px;
+      display: block;
+      font-size: 1.1em;
+      color: #777 !important;
+    }
+    ._PG-index ._UI-leftList .ui-l-item li a:hover {
+      color: #000 !important;
+    }
+    ._PG-index ._UI-leftList .ui-l-item li a span {
+      margin-left: 2px;
+      color: #aaa;
+      font-size: 0.8em;
+    }
+    ._PG-index ._UI-leftList .ui-l-item .ui-l-i-avtive >a {
+      color: /*Tstart-mainCl*/ #03a6ff /*Tend-mainCl*/ !important;
+    }
+    ._PG-index ._UI-leftList .ui-l-item .ui-l-i-avtive >a:hover {
+      color: /*Tstart-mainCl*/ #03a6ff /*Tend-mainCl*/ !important;
+    }
+    ._PG-index ._UI-leftList .ui-l-item >section >ul >li >ul >li {
+      padding: 0 14px;
+      font-size: 0.8em;
+    }
+    ._PG-index ._UI-rightBox section {
+      padding: 30px;
+      width: 100%;
+      border-top: 1px solid #eee;
+    }
+    ._PG-index ._UI-rightBox section:first-child {
+      border: none;
+    }
+  `)
+    
+    
   },
   beforeDestroy() {
     //销毁前 - 实例仍然完全可用
