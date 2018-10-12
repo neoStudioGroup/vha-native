@@ -4,9 +4,9 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
-import Antd from 'ant-design-vue'
-import 'ant-design-vue/dist/antd.css'
-Vue.use(Antd)
+// import Antd from 'ant-design-vue'
+// import 'ant-design-vue/dist/antd.css'
+// Vue.use(Antd)
 
 import axios from 'axios'
 Vue.prototype.$ajax = axios
@@ -20,9 +20,6 @@ router.beforeEach((to,from,next) => {
 router.afterEach(() => {
   NProgress.done()
 })
-
-import MetaInfo from 'vue-meta-info'
-Vue.use(MetaInfo)
 
 Vue.config.productionTip = false
 new Vue({
