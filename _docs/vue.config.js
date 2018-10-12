@@ -12,26 +12,26 @@ module.exports = {
       }
     }
   },
-  // configureWebpack: {
-  //   plugins: [
-  //     new PrerenderSPAPlugin({
-  //       staticDir: path.join(__dirname, '..') + '\\docs',
-  //       routes: [ 
-  //         '/', 
-  //         '/aaa', 
-  //         '/bbb' 
-  //       ],
-  //       postProcessHtml: function (context) {
-  //         var titles = {
-  //           '/': 'Home',
-  //           '/aaa': 'Our Story'
-  //         }
-  //         return context.html.replace(
-  //           /<title>[^<]*<\/title>/i,
-  //           '<title>' + titles[context.route] + '</title>'
-  //         )
-  //       }
-  //     })
-  //   ]  
-  // }  
+  configureWebpack: {
+    plugins: [
+      new PrerenderSPAPlugin({
+        staticDir: path.join(__dirname, '..') + '\\docs',
+        routes: [ 
+          '/', 
+          '/aaa', 
+          '/bbb' 
+        ],
+        postProcessHtml: function (context) {
+          var titles = {
+            '/': 'Home',
+            '/aaa': 'Our Story'
+          }
+          return context.html.replace(
+            /<title>[^<]*<\/title>/i,
+            '<title>' + titles[context.route] + '</title>'
+          )
+        }
+      })
+    ]  
+  }  
 }
