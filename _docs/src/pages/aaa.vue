@@ -11,10 +11,11 @@
   <div class="_PG-aaa">
 
     <!-- UI组件-名称 -->
-    <div class="_UI-name">
-      222222
+    <div class="_UI-name" @click="onClick">
+      2222333333
     </div>
     <router-link to="/">1111</router-link>
+    
 
   </div>
 </template>
@@ -45,6 +46,9 @@ export default {
   },
   methods: {
     //方法 - 进入页面创建
+    onClick: function () {
+      alert(111)
+    }
   },
   watch: {
     //观察 - 数据或方法变动
