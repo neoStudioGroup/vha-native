@@ -421,6 +421,8 @@ export default {
       }
     `)
     
+    console.log(this.$router)
+    
     let tmp_path = this.$router.history.current.path
     this.menus.forEach(tmp_menus => {
       tmp_menus.list.forEach(tmp_list => {
