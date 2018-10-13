@@ -298,6 +298,27 @@ export default {
               select: false,
               showItem: false,
               item: [
+                {
+                  subText: '启动屏幕',
+                  subNote: 'Splashscreen',
+                  noteClass: '',
+                  href: '#documentationgetting_started',
+                  select: true
+                },
+                {
+                  subText: '状态栏',
+                  subNote: 'StatusBar',
+                  noteClass: '',
+                  href: '#documentationauthentication',
+                  select: false
+                },
+                {
+                  subText: '网络状态',
+                  subNote: 'Network',
+                  noteClass: '',
+                  href: '#documentationerrors',
+                  select: false
+                }
               ]
             },
             {
@@ -427,9 +448,10 @@ export default {
     let tmp_path = this.$router.history.current.path
     this.menus.forEach(tmp_menus => {
       tmp_menus.list.forEach(tmp_list => {
-        if('/' + tmp_path.replace(/\//g, '') === tmp_list.href )
+        if('/' + tmp_path.replace(/\//g, '') === tmp_list.href) {
           tmp_list.showItem = true
           tmp_list.select = true
+        }
       })
     })
     
