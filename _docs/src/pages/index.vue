@@ -369,8 +369,6 @@ export default {
       this.menus[menusIndex].list[listIndex].showItem = !this.menus[menusIndex].list[listIndex].showItem
     },
     onColor: function (name, color) {
-      console.log(this.$router)
-      
       let tmp_styles = document.querySelectorAll('head style')
       
       //取字符串中间内容
@@ -397,10 +395,8 @@ export default {
   },
   created() {
     //实例创建完成后
-    console.log(11111)
   },
   mounted() {
-    console.log(22222)
     //挂载实例后 - this.el存在
     let loadCssCode = function (code){
         var style = document.createElement('style');
@@ -428,12 +424,10 @@ export default {
       }
     `)
     
-    console.log(this.$router)
-    
     let tmp_path = this.$router.history.current.path
     this.menus.forEach(tmp_menus => {
       tmp_menus.list.forEach(tmp_list => {
-        if(tmp_list.href === tmp_path)
+        if('/' + tmp_path.replace(/\//g, '') === tmp_list.href )
           tmp_list.showItem = true
       })
     })
