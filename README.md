@@ -2,7 +2,7 @@
 <p align="center">
   <em>扫描二维码下载apk体验</em>
 </p>
-<p align="center"><img align="center" width="200" src="https://raw.githubusercontent.com/neoStudioGroup/vha/master/README/logo.png"/></p>
+<p align="center"><img align="center" width="200" src="https://raw.githubusercontent.com/neoStudioGroup/vha-native/master/README/qr.png"/></p>
 
 ## 关于vha-native
 
