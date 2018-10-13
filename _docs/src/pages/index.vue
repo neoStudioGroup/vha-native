@@ -119,11 +119,12 @@
         padding 0
         margin 0
         code
-          padding 0 26px
-          border-radius 10px
+          padding 15px
+          border-radius 8px
           white-space pre-wrap
-          font-size 1em
+          font-size 16px
           letter-spacing .1px
+          background-color #282c34
       dl
         border-top 1px solid #eee
         border-bottom 1px solid #eee
