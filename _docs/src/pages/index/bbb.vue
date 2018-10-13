@@ -40,6 +40,6 @@ export default {
   },
   beforeDestroy() {
     //销毁前 - 实例仍然完全可用
-  },
+  }
 }
 </script>

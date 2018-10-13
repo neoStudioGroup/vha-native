@@ -5,7 +5,7 @@
   *
     transition all .5s
   
-  .ui-l-item::-webkit-scrollbar-track-piece
+  .ui-l-menu::-webkit-scrollbar-track-piece
     background-color transparent
   
   // UI组件-左侧列表
@@ -48,7 +48,7 @@
         box-shadow 0 0 0 1px #ddd
         box-sizing content-box
         
-    .ui-l-item
+    .ui-l-menu
       padding 20px 0
       .ui-l-i-title
         margin 8px 20px
@@ -91,11 +91,42 @@
     // padding 40px
     // background-color white
     section
-      padding 30px
+      padding 30px 50px
       width 100%
+      font-size 1.2em
+      color #474a54
       border-top 1px solid lineCl
       &:first-child
         border none
+      h1, h2, h3, h4, h5, h6
+        margin-bottom 30px
+      a
+        @extend ._clear-a
+        color #474a54 !important
+      table
+        border 1px solid #E1E1E1
+        margin 0 0 20px 0
+        border-collapse collapse
+        td, th
+          border 1px solid #ccc
+          padding 10px
+          font-size .9em
+          text-align left
+        th
+          background #f7f7f7
+
+
+        
+      .ui-r-note
+        border-left 5px solid #aaa
+        padding 12px 15px
+        margin-left -20px
+        margin-right -15px
+        background-color #FAFAFA
+        border-radius 2px
+        
+        
+        
     
 
 </style>
@@ -111,7 +142,27 @@
       <div class="ui-l-search">
         <input class="_reInput" placeholder="Search" />
       </div>
-      <div class="ui-l-item _flexYauto">
+      <div class="ui-l-menu _flexYauto">
+        <section v-for="(menu, menuIndex) in menus" :key="menuIndex">
+          <p class="ui-l-i-title">{{menu.title}}</p>
+          <ul>
+            <li :class="menuList.select ? 'ui-l-i-avtive' : ''" v-for="(menuList, menuListIndex) in menu.list" :key="menuListIndex">
+              <a :href="menuList.href" @click="onItemshow(menuIndex, menuListIndex)">
+                {{menuList.text}}
+                <span :class="menuList.noteClass">{{menuList.note}}</span>
+              </a>
+              <ul v-show="menuList.showItem">
+                <li :class="menuListItem.select ? 'ui-l-i-avtive' : ''" v-for="(menuListItem, menuListItemIndex) in menuList.item" :key="menuListItemIndex">
+                  <a :href="menuListItem.href">
+                    {{menuListItem.subText}}
+                    <span :class="menuListItem.noteClass">{{menuListItem.subNote}}</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <!-- 
         <section>
           <p class="ui-l-i-title">Documentation</p>
           <ul>
@@ -152,129 +203,20 @@
             </li>
           </ul>
         </section>
-        <section>
-          <p class="ui-l-i-title">Apis</p>
-          <ul>
-            <li>
-              <a href="#documentationgetting_started">
-                /books
-                <span class="_cl-66bb6a">POST</span>
-              </a>
-            </li>
-            <li>
-              <a href="#documentationgetting_started">
-                /books
-                <span class="_cl-42a5f5">POST</span>
-              </a>
-            </li>
-            <li class="ui-l-i-avtive">
-              <a href="#documentationauthentication">
-                /books/:id
-                <span class="_cl-7e57c2">PUT</span>
-              </a>
-            </li>
-            <li>
-              <a href="#documentationerrors">
-                /books/:id
-                <span class="_cl-ff7043">DELETE</span>
-              </a>
-            </li>
-          </ul>
-        </section>
-        
+         -->
       </div>
       <div class="ui-l-color _df _jssa">
-        <div style="background-color:#03a6ff" @click="changeColor('mainCl', '#03a6ff')"></div>
-        <div style="background-color:#f1404b" @click="changeColor('mainCl', '#f1404b')"></div>
-        <div style="background-color:#3ac569" @click="changeColor('mainCl', '#3ac569')"></div>
-        <div style="background-color:#35d69b" @click="changeColor('mainCl', '#35d69b')"></div>
+        <div style="background-color:#03a6ff" @click="onColor('mainCl', '#03a6ff')"></div>
+        <div style="background-color:#f1404b" @click="onColor('mainCl', '#f1404b')"></div>
+        <div style="background-color:#3ac569" @click="onColor('mainCl', '#3ac569')"></div>
+        <div style="background-color:#35d69b" @click="onColor('mainCl', '#35d69b')"></div>
       </div>
     </div>
     <!-- UI组件-右侧内容 -->
     <div class="_UI-rightBox _flexYauto">
-      <section id="documentationgetting_started">
-        <router-link to="/aaa">2222</router-link>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-        1111111 <br>
-      </section>
-      <section id="documentationauthentication">
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-        2222222 <br>
-      </section>
-      <section id="documentationerrors">
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-        3333333 <br>
-      </section>
+      <router-view></router-view>
+      
+      
       
     </div>
   </div>
@@ -286,6 +228,109 @@ export default {
   data() {
     //动态数据
     return {
+      menus: [
+        {
+          title: 'Documentation',
+          list: [
+            {
+              text: 'Getting Started',
+              note: '',
+              noteClass: '',
+              href: '#documentationgetting_started',
+              select: true,
+              showItem: false,
+              item: [
+                {
+                  subText: '启动屏幕',
+                  subNote: 'Splashscreen',
+                  noteClass: '',
+                  href: '#',
+                  select: true
+                },
+                {
+                  subText: '状态栏',
+                  subNote: 'StatusBar',
+                  noteClass: '',
+                  href: '#',
+                  select: false
+                },
+                {
+                  subText: '网络状态',
+                  subNote: 'Network',
+                  noteClass: '',
+                  href: '#',
+                  select: false
+                }
+              ]
+            },
+            {
+              text: 'Authentication',
+              note: '',
+              noteClass: '',
+              href: '#documentationauthentication',
+              select: false,
+              showItem: false,
+              item: [
+              ]
+            },
+            {
+              text: 'Errors',
+              note: '',
+              noteClass: '',
+              href: '#documentationerrors',
+              select: false,
+              showItem: false,
+              item: [
+              ]
+            }
+          ]
+        },
+        {
+          title: 'Apis',
+          list: [
+            {
+              text: '/books',
+              note: 'POST',
+              noteClass: '_cl-66bb6a',
+              href: '#',
+              select: false,
+              showItem: false,
+              item: [
+              ]
+            },
+            {
+              text: '/books',
+              note: 'POST',
+              noteClass: '_cl-42a5f5',
+              href: '#',
+              select: false,
+              showItem: false,
+              item: [
+              ]
+            },
+            {
+              text: '/books/:id',
+              note: 'PUT',
+              noteClass: '_cl-7e57c2',
+              href: '#',
+              select: false,
+              showItem: false,
+              item: [
+              ]
+            },
+            {
+              text: '/books/:id',
+              note: 'DELETE',
+              noteClass: '_cl-ff7043',
+              href: '#',
+              select: false,
+              showItem: false,
+              item: [
+              ]
+            }
+          ]
+        }
+      ]
     }
   },
   components: {
@@ -293,7 +338,10 @@ export default {
   },
   methods: {
     //方法 - 进入页面创建
-    changeColor: function (name, color) {
+    onItemshow: function (menusIndex, listIndex) {
+      this.menus[menusIndex].list[listIndex].showItem = !this.menus[menusIndex].list[listIndex].showItem
+    },
+    onColor: function (name, color) {
       let tmp_styles = document.querySelectorAll('head style')
       
       //取字符串中间内容
@@ -335,16 +383,16 @@ export default {
       ._PG-index ._UI-leftList .ui-l-search input:focus {
         border-left: 5px solid /*Tstart-mainCl*/ #03a6ff /*Tend-mainCl*/;
       }
-      ._PG-index ._UI-leftList .ui-l-item .ui-l-i-avtive >a {
+      ._PG-index ._UI-leftList .ui-l-menu .ui-l-i-avtive >a {
         color: /*Tstart-mainCl*/ #03a6ff /*Tend-mainCl*/ !important;
       }
-      ._PG-index ._UI-leftList .ui-l-item .ui-l-i-avtive >a:hover {
+      ._PG-index ._UI-leftList .ui-l-menu .ui-l-i-avtive >a:hover {
         color: /*Tstart-mainCl*/ #03a6ff /*Tend-mainCl*/ !important;
       }
     `)
   },
   beforeDestroy() {
     //销毁前 - 实例仍然完全可用
-  },
+  }
 }
 </script>
