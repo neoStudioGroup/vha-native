@@ -13,11 +13,13 @@ Vue.prototype.$ajax = axios
 
 import NProgress from "nprogress"
 import "nprogress/nprogress.css"
-router.beforeEach((to,from,next) => {
-  NProgress.start()
+router.beforeEach((to, from, next) => {
+  if (to.hash === "") {
+    NProgress.start()
+  }
   next()
 })
-router.afterEach(() => {
+router.afterEach((to, from, next) => {
   NProgress.done()
 })
 

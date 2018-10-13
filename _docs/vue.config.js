@@ -18,8 +18,9 @@ module.exports = {
         staticDir: path.join(__dirname, '..') + '\\docs',
         routes: [ 
           '/', 
-          '/aaa', 
-          '/bbb' 
+          '/Getting-Started', 
+          '/Authentication', 
+          '/Errors'
         ],
         postProcessHtml: function (context) {
           var titles = {

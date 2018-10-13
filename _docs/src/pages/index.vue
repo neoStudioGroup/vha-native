@@ -115,7 +115,38 @@
         th
           background #f7f7f7
 
-
+      pre
+        padding 0
+        margin 0
+        code
+          padding 0 26px
+          border-radius 10px
+          white-space pre-wrap
+          font-size 1em
+          letter-spacing .1px
+      dl
+        border-top 1px solid #eee
+        border-bottom 1px solid #eee
+        padding 0 0 20px 0
+        margin 0 0 20px 0
+        dt
+          width 30%
+          float left
+          font-weight 700
+          position relative
+          top 20px
+        dd
+          margin-left 30%
+          padding-left 15px
+          margin-top 20px
+          &:after
+            visibility hidden
+            display block
+            content ""
+            clear both
+            height 0
+          +dd
+            margin-top 0
         
       .ui-r-note
         border-left 5px solid #aaa
@@ -124,10 +155,6 @@
         margin-right -15px
         background-color #FAFAFA
         border-radius 2px
-        
-        
-        
-    
 
 </style>
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
@@ -147,7 +174,7 @@
           <p class="ui-l-i-title">{{menu.title}}</p>
           <ul>
             <li :class="menuList.select ? 'ui-l-i-avtive' : ''" v-for="(menuList, menuListIndex) in menu.list" :key="menuListIndex">
-              <a :href="menuList.href" @click="onItemshow(menuIndex, menuListIndex)">
+              <a :href="procURL(menuList.href)" @click="onItemshow(menuIndex, menuListIndex)">
                 {{menuList.text}}
                 <span :class="menuList.noteClass">{{menuList.note}}</span>
               </a>
@@ -215,14 +242,13 @@
     <!-- UI组件-右侧内容 -->
     <div class="_UI-rightBox _flexYauto">
       <router-view></router-view>
-      
-      
-      
     </div>
   </div>
 </template>
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 <script type="text/ecmascript-6">
+import hljs from "highlight.js";
+import "highlight.js/styles/atom-one-dark.css";
 export default {
   name: 'PGindex',
   data() {
@@ -236,7 +262,7 @@ export default {
               text: 'Getting Started',
               note: '',
               noteClass: '',
-              href: '#documentationgetting_started',
+              href: '/Getting-Started',
               select: true,
               showItem: false,
               item: [
@@ -244,21 +270,21 @@ export default {
                   subText: '启动屏幕',
                   subNote: 'Splashscreen',
                   noteClass: '',
-                  href: '#',
+                  href: '#documentationgetting_started',
                   select: true
                 },
                 {
                   subText: '状态栏',
                   subNote: 'StatusBar',
                   noteClass: '',
-                  href: '#',
+                  href: '#documentationauthentication',
                   select: false
                 },
                 {
                   subText: '网络状态',
                   subNote: 'Network',
                   noteClass: '',
-                  href: '#',
+                  href: '#documentationerrors',
                   select: false
                 }
               ]
@@ -267,7 +293,7 @@ export default {
               text: 'Authentication',
               note: '',
               noteClass: '',
-              href: '#documentationauthentication',
+              href: '/Authentication',
               select: false,
               showItem: false,
               item: [
@@ -277,7 +303,7 @@ export default {
               text: 'Errors',
               note: '',
               noteClass: '',
-              href: '#documentationerrors',
+              href: '/Errors',
               select: false,
               showItem: false,
               item: [
@@ -358,6 +384,9 @@ export default {
           element.innerHTML = tmp_innerHTML.replace(new RegExp(`(/${tmp_string}/)`,'g'), `/${color}/`)
         }
       })
+    },
+    procURL: function (url) {
+      return this.$router.history.base + url
     }
   },
   watch: {
@@ -390,6 +419,24 @@ export default {
         color: /*Tstart-mainCl*/ #03a6ff /*Tend-mainCl*/ !important;
       }
     `)
+    
+    let tmp_path = this.$router.history.current.path
+    this.menus.forEach(tmp_menus => {
+      tmp_menus.list.forEach(tmp_list => {
+        if(tmp_list.href === tmp_path)
+          tmp_list.showItem = true
+      })
+    })
+    
+    this.$nextTick(function() {
+      let blocks = document.querySelectorAll("pre code")
+      blocks.forEach(block => {
+        hljs.configure({languages: ['javascript']})
+        hljs.highlightBlock(block)
+        // hljs.registerLanguage('javascript', javascript);
+      })
+    })
+    
   },
   beforeDestroy() {
     //销毁前 - 实例仍然完全可用

@@ -16,6 +16,15 @@
       <p class="ui-r-note _bdc-ffc107">Something may not happen if you try and do this.</p>
       <p class="ui-r-note _bdc-ff2200">Something bad will happen if you do this.</p>
       
+      <p>Parameters</p>
+      
+      <dl>
+        <dt>title</dt>
+        <dd>The title for the book</dd>
+        <dt>score</dt>
+        <dd>The book's score between 0 and 5</dd>
+      </dl>
+      
       <table>
         <thead>
           <tr>
@@ -47,6 +56,7 @@
           </tr>
         </tbody>
       </table>
+      
 <pre>
 StatusBaroverlaysWebView: function () {
 this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
@@ -61,6 +71,7 @@ this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
 }
 }
 </pre>
+
     </section>
 
     <section id="documentationauthentication">

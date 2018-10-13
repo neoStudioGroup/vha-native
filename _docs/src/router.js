@@ -2,8 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import index from '@/pages/index.vue'
-import aaa from '@/pages/index/aaa.vue'
-import bbb from '@/pages/index/bbb.vue'
+import GettingStarted from '@/pages/index/Getting-Started.vue'
+import Authentication from '@/pages/index/Authentication.vue'
+import Errors from '@/pages/index/Errors.vue'
 
 Vue.use(Router)
 
@@ -14,15 +15,19 @@ export default new Router({
     { 
       path: '/',
       component: index,
-      redirect: '/aaa',
+      redirect: '/Getting-Started',
       children: [
         {
-          path: '/aaa',
-          component: aaa
+          path: '/Getting-Started',
+          component: GettingStarted
         },
         {
-          path: '/bbb',
-          component: bbb
+          path: '/Authentication',
+          component: Authentication
+        },
+        {
+          path: '/Errors',
+          component: Errors
         }
       ]
     }

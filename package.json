@@ -28,5 +28,6 @@
     "cordova",
     "vuejs",
     "plugin"
-  ]
+  ],
+  "dependencies": {}
 }
