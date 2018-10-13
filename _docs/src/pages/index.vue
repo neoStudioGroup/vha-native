@@ -448,6 +448,7 @@ export default {
     let tmp_path = this.$router.history.current.path
     this.menus.forEach(tmp_menus => {
       tmp_menus.list.forEach(tmp_list => {
+        console.log('/' + tmp_path.replace(/\//g, '') , tmp_list.href)
         if('/' + tmp_path.replace(/\//g, '') === tmp_list.href) {
           tmp_list.showItem = true
           tmp_list.select = true
