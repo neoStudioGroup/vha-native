@@ -369,6 +369,8 @@ export default {
       this.menus[menusIndex].list[listIndex].showItem = !this.menus[menusIndex].list[listIndex].showItem
     },
     onColor: function (name, color) {
+      console.log(this.$router)
+      
       let tmp_styles = document.querySelectorAll('head style')
       
       //取字符串中间内容
