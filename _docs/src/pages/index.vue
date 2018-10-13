@@ -393,7 +393,12 @@ export default {
   watch: {
     //观察 - 数据或方法变动
   },
+  created() {
+    //实例创建完成后
+    console.log(11111)
+  },
   mounted() {
+    console.log(22222)
     //挂载实例后 - this.el存在
     let loadCssCode = function (code){
         var style = document.createElement('style');
