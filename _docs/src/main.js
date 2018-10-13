@@ -14,6 +14,7 @@ Vue.prototype.$ajax = axios
 import NProgress from "nprogress"
 import "nprogress/nprogress.css"
 router.beforeEach((to, from, next) => {
+  console.log(to, from)
   if (to.hash === "") {
     NProgress.start()
   }
