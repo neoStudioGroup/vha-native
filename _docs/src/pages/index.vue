@@ -264,7 +264,7 @@ export default {
               note: '',
               noteClass: '',
               href: '/Getting-Started',
-              select: true,
+              select: false,
               showItem: false,
               item: [
                 {
@@ -429,6 +429,7 @@ export default {
       tmp_menus.list.forEach(tmp_list => {
         if('/' + tmp_path.replace(/\//g, '') === tmp_list.href )
           tmp_list.showItem = true
+          tmp_list.select = true
       })
     })
     
