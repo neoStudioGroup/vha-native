@@ -82,8 +82,9 @@
           >li
             >ul
               >li
-                padding 0 14px
-                font-size 0.8em
+                >a
+                  padding 4px 40px
+                  font-size 0.8em
 
       
   // UI组件-右侧内容
