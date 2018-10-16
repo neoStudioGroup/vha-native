@@ -1,4 +1,7 @@
+//将.md文件按照模板布局转换成.vue文件
+
 let config = {
+  template: '',
   inpath: '',
   outpath: ''
 }

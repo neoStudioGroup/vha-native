@@ -1,4 +1,7 @@
 ---
-title: 开始
+{
+  title: '开始',
+  name: 'Getting-Started'
+}
 ---
 
