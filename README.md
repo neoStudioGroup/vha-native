@@ -3,6 +3,7 @@
   <em>扫描二维码下载apk体验</em>
 </p>
 <p align="center"><img align="center" width="200" src="https://raw.githubusercontent.com/neoStudioGroup/vha-native/master/README/qr.png"/></p>
+<p align="center">
   <a href="https://www.npmjs.com/package/vha-native"><img src="https://badgen.net/npm/v/vha-native" alt="Version"></a>
   <a href="https://codeload.github.com/neoStudioGroup/vha-native/zip/master"><img src="https://badgen.net/npm/dt/vha-native" alt="downloads"></a>
   <a href="https://github.com/neoStudioGroup/vha-native/blob/master/LICENSE"><img src="https://badgen.net/npm/license/vha-native" alt="License"></a>
