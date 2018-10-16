@@ -21,8 +21,8 @@ npm install vha-native --save
 ```javascript
 // import
 import Vue from 'vue'
-import VueNative from 'vha-native'
-Vue.use(VueNative)
+import vhaNative from 'vha-native'
+Vue.use(vhaNative)
 ```
 
 添加device插件(或者直接在vhaGUI中选择插件)
