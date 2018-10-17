@@ -70,24 +70,16 @@
 ._db {display: block;}
 // 内联块元素
 ._dib {display: inline-block;}
-// 强制不换行
-._wsn {white-space: nowrap;}
 // 内容超出隐藏
 ._oh {overflow: hidden;}
-// 重置input
-._reInput {
-  outline: none;
-  background: transparent;
-  border: none;
-  outline: medium;
-}
 
-// ========== 盒子常用 ===== start
+
+// ========== 盒子常用 ========== start
 // 盒子
 ._df {display: flex;}
 // 内联盒子
 ._dif {display: inline-flex;}
-// 水平方向轴线 - 默认
+// 水平方向轴线 (默认)
 ._fdr {flex-direction: row;}
 // 垂直方向轴线
 ._fdc {flex-direction: column;}
@@ -123,18 +115,29 @@
 ._asfe {align-self: flex-end;}
 // 子元素-填充
 ._ass {align-self: stretch;}
-// ========== 盒子常用 ===== end
+// ========== 盒子常用 ========== end
 
-._clear-a
-  text-decoration none
-  &:link
-    color #000 //未访问的链接
-  &:visited
-    color #000 //已访问的链接
-  &:hover
-    color #000 //鼠标划过链接
-  &:active
-    color #000 //已选中的链接
+// ========== 文本常用 ========== start
+
+// -----------------------------------强制不换行
+// normal	默认。空白会被浏览器忽略。
+// pre	空白会被浏览器保留。其行为方式类似 HTML 中的 <pre> 标签。
+// nowrap	文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。
+// pre-wrap	保留空白符序列，但是正常地进行换行。
+// pre-line	合并空白符序列，但是保留换行符。
+// inherit	规定应该从父元素继承 white-space 属性的值。
+._wsn {white-space: nowrap;}
+// -----------------------------------文本换行(元素不换行)
+// normal 使用浏览器默认的换行规则。
+// break-all 允许在单词内换行。
+// keep-all 只能在半角空格或连字符处换行。
+._wbba {word-break: break-all;}
+// -----------------------------------文本换行(元素另起一行)
+// normal 只在允许的断字点换行（浏览器保持默认处理）。
+// break-word 在长单词或 URL 地址内部进行换行。
+._wwbw {word-wrap: break-word;}
+// 文本超出省略号(需配合overflow: hidden)
+._toe {text-overflow: ellipsis;}
 
 // 去掉文字省略号
 ._noRowHide{
@@ -161,6 +164,26 @@
 	//  autoprefixer: on
 	word-break: break-all;
 }
+// ========== 文本常用 ========== end
+
+// 清除<input>标签属性
+._reInput {
+  outline: none;
+  background: transparent;
+  border: none;
+  outline: medium;
+}
+// 清除<a>标签属性
+._clear-a
+  text-decoration none
+  &:hover
+    color #000 //鼠标划过链接
+  &:active
+    color #000 //已选中的链接
+  &:visited
+    color #000 //已访问的链接
+  &:link
+    color #000 //未访问的链接
 
 // ------------------------- 公共组件 -------------------------
 

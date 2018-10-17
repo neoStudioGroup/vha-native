@@ -1,34 +1,33 @@
 ---
 {
-  "title": "快速开始",
-  "name": "Getting-Started",
+  "title": "上拉菜单",
+  "name": "Action-Sheet",
   "time": "2018-10-17 16:33:09"
 }
 ---
 
-<section id="documentationgetting_started">
+<section id="Action-Sheet">
 
-# [Getting Started](#documentationgetting_started)
+# [Action Sheet](#Action-Sheet)
 
-<router-link to="/aaa">2222</router-link>
+显示一个用户可以选择的原生上拉菜单.iOS调用UIActionSheet. Android调用AlertDialog。
 
-Welcome to our API.
+</section>
+<!-- ------------------------------------------- -->
+<section id="Methods">
 
-This API document is designed for those interested in developing for our platform.
+# [方法(Methods)](#Methods)
 
-This API is still under development anll under development anll under development anll under development anll under development anll under development anll under development anll under development and will evolve.
 
-This API is still under development and will evolve.
-<p class="_cl-aaaaaa">You’ll succeed if you do this.</p>
+
+> <router-link to="/aaa">2222</router-link>
+
 
 <p class="ui-r-note _bdc-66cc00">You’ll succeed if you do this.</p>
-<p class="ui-r-note _bdc-56adec">Here’s some useful information.</p>
-<p class="ui-r-note _bdc-ffc107">Something may not happen if you try and do this.</p>
-<p class="ui-r-note _bdc-ff2200">Something bad will happen if you do this.</p>
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
 
-> cordova plugin add cordova-plugin-chrome
+
+Parameters
 
 <dl>
   <dt>title</dt>
@@ -44,15 +43,6 @@ Code|Name|Description
 400|Bad Request|We could not process that action
 403|Forbidden|We couldn’t authenticate you
 
-</section>
-<!-- ------------------------------------------- -->
-<section id="documentationauthentication">
-
-# [Authentication](#documentationauthentication)
-
-222222222
-
-222222222
 
 222222222
 
@@ -110,9 +100,9 @@ Code|Name|Description
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="documentationerrors">
+<section id="code">
 
-# [Errors](#documentationerrors)
+# [代码实例(code)](#code)
 
 ```javascript
 StatusBaroverlaysWebView: function () {
@@ -178,6 +168,22 @@ StatusBaroverlaysWebView: function () {
 333333333
 
 333333333
+
+333333333
+
+333333333
+
+</section>
+<!-- ------------------------------------------- -->
+<section id="Scenes">
+
+# [应用场景(Scenes)](#Scenes)
+
+
+333333333
+
+333333333
+
 
 333333333
 

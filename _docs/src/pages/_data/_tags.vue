@@ -17,6 +17,12 @@
       <p class="ui-r-note _bdc-ffc107">Something may not happen if you try and do this.</p>
       <p class="ui-r-note _bdc-ff2200">Something bad will happen if you do this.</p>
       
+      <p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
+      
+      <blockquote>
+        <p>cordova plugin add cordova-plugin-chrome</p>
+      </blockquote>
+      
       <p>Parameters</p>
       
       <dl>

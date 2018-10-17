@@ -3,7 +3,7 @@
   height 100%
   
   *
-    transition all .5s
+    transition all .4s
   
   .ui-l-menu::-webkit-scrollbar-track-piece
     background-color transparent
@@ -17,7 +17,7 @@
       cursor pointer
       padding 0 20px
       height 60px
-      background url('../assets/images/cloud-bg.png') no-repeat scroll 0% bottom
+      background url('../assets/images/cloud-bg.png') no-repeat 0% bottom
       background-color /*Tstart-mainCl*/mainCl/*Tend-mainCl*/
       box-shadow inset -10px 0 10px -10px rgba(0,0,0,.1)
       span
@@ -60,6 +60,23 @@
           text-decoration underline
       span
         color #aaa
+    .ui-r-npm
+      padding 6px
+      padding-left 26px
+      font-size .8em
+      border 1px solid #eee
+      border-radius 3px
+      color #888888 !important
+      background url('../assets/images/npm.png') no-repeat 6px center
+      &:hover
+        color #474a54 !important
+    blockquote
+      padding 10px
+      border 0px
+      border-radius 3px
+      box-shadow 0 0 0 1px #eee
+      p
+        margin 0
     section
       padding 30px 50px
       width 100%
@@ -138,7 +155,7 @@
     <div class="_UI-menu _df _fdc">
       <div class="ui-l-title _df _aic _cl-fff" @click="$router.push('/')">
         <i class="fa fa-mobile-phone fa-2x"></i>
-        <span class="_di">Native</span>
+        <span class="_di">Native docs</span>
       </div>
       <div class="ui-l-search">
         <input class="_reInput" placeholder="Search" />
@@ -370,9 +387,9 @@ export default {
   },
   watch: {
     //观察 - 数据或方法变动
-    'this.$router': function () {
-      console.log(this.$router)
-    }
+    // 'this.$router': function () {
+    //   console.log(this.$router)
+    // }
   },
   created() {
     //实例创建完成后
@@ -380,15 +397,15 @@ export default {
   mounted() {
     //挂载实例后 - this.el存在
     let loadCssCode = function (code){
-        var style = document.createElement('style');
-        style.type = 'text/css';
-        style.rel = 'stylesheet';
-        //for Chrome Firefox Opera Safari
-        style.appendChild(document.createTextNode(code));
-        //for IE
-        //style.styleSheet.cssText = code;
-        var head = document.getElementsByTagName('head')[0];
-        head.appendChild(style);
+      var style = document.createElement('style');
+      style.type = 'text/css';
+      style.rel = 'stylesheet';
+      //for Chrome Firefox Opera Safari
+      style.appendChild(document.createTextNode(code));
+      //for IE
+      //style.styleSheet.cssText = code;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(style);
     }
     loadCssCode(`
       ._PG-index ._UI-menu .ui-l-title {
@@ -409,7 +426,7 @@ export default {
     this.$nextTick(function() {
       let blocks = document.querySelectorAll("pre code")
       blocks.forEach(block => {
-        hljs.configure({languages: ['javascript']})
+        // hljs.configure({languages: ['javascript']})
         hljs.highlightBlock(block)
         // hljs.registerLanguage('javascript', javascript);
       })
