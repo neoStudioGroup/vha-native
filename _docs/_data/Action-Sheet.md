@@ -5,7 +5,7 @@
   "time": "2018-10-17 16:33:09"
 }
 ---
-
+<!-- ------------------------------------------- -->
 <section id="Action-Sheet">
 
 # [Action Sheet](#Action-Sheet)
@@ -18,14 +18,9 @@
 
 # [方法(Methods)](#Methods)
 
-
-
 > <router-link to="/aaa">2222</router-link>
 
-
-<p class="ui-r-note _bdc-66cc00">You’ll succeed if you do this.</p>
-
-
+<p class="ui-r-note _bdc-success">You’ll succeed if you do this.</p>
 
 Parameters
 

@@ -70,6 +70,11 @@
       background url('../assets/images/npm.png') no-repeat 6px center
       &:hover
         color #474a54 !important
+    ul
+      padding 10px 30px
+      li
+        list-style-type disc
+    
     blockquote
       padding 10px
       border 0px
@@ -77,16 +82,25 @@
       box-shadow 0 0 0 1px #eee
       p
         margin 0
+    
     section
-      padding 30px 50px
+      padding 25px 40px
       width 100%
-      font-size 1.2em
+      font-size 1.1em
       color #474a54
       border-top 1px solid lineCl
       &:first-child
         border none
+      ._cl-aaaaaa
+        font-style italic
       h1, h2, h3, h4, h5, h6
         margin-bottom 30px
+        strong
+          a
+            &:after
+              content '#'
+              margin-left 6px
+              color #1890ff
       a
         @extend ._clear-a
         color #474a54 !important
@@ -111,7 +125,8 @@
           white-space pre-wrap
           font-size 16px
           letter-spacing .1px
-          background-color #282c34
+          // background-color #282c34
+      
       dl
         border-top 1px solid #eee
         border-bottom 1px solid #eee
@@ -135,9 +150,6 @@
             height 0
           +dd
             margin-top 0
-            
-
-        
         
       .ui-r-note
         border-left 5px solid #aaa
@@ -222,7 +234,7 @@
 <script type="text/ecmascript-6">
 import UImenu from "../components/menu";
 import hljs from "highlight.js";
-import "highlight.js/styles/atom-one-dark.css";
+import "highlight.js/styles/atom-one-light.css";
 export default {
   name: 'PGindex',
   data() {
@@ -233,8 +245,8 @@ export default {
           title: 'Documentation',
           list: [
             {
-              text: 'Getting Started',
-              note: '',
+              text: '快速开始',
+              note: 'Getting Started',
               noteClass: '',
               href: '/Getting-Started',
               select: false,
@@ -262,93 +274,258 @@ export default {
                   select: false
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          title: '系统 System',
+          list: [
             {
-              text: 'Authentication',
-              note: '',
+              text: '启动屏幕',
+              note: 'Splashscreen',
               noteClass: '',
-              href: '/Authentication',
+              href: '/Splashscreen',
               select: false,
               showItem: false,
               item: [
                 {
-                  subText: '启动屏幕',
-                  subNote: 'Splashscreen',
+                  subText: '应用场景',
+                  subNote: '',
                   noteClass: '',
-                  href: '#documentationgetting_started',
-                  select: true
-                },
-                {
-                  subText: '状态栏',
-                  subNote: 'StatusBar',
-                  noteClass: '',
-                  href: '#documentationauthentication',
+                  href: '#Scenes',
                   select: false
                 },
                 {
-                  subText: '网络状态',
-                  subNote: 'Network',
+                  subText: '代码实例',
+                  subNote: '',
                   noteClass: '',
-                  href: '#documentationerrors',
+                  href: '#code',
                   select: false
                 }
               ]
             },
             {
-              text: 'Errors',
-              note: '',
+              text: '状态栏',
+              note: 'StatusBar',
               noteClass: '',
-              href: '/Errors',
+              href: '/StatusBar',
               select: false,
               showItem: false,
               item: [
+                {
+                  subText: '应用场景',
+                  subNote: '',
+                  noteClass: '',
+                  href: '#Scenes',
+                  select: false
+                },
+                {
+                  subText: '代码实例',
+                  subNote: '',
+                  noteClass: '',
+                  href: '#code',
+                  select: false
+                }
               ]
-            }
+            },
+            {
+              text: '网络状态',
+              note: 'Network',
+              noteClass: '',
+              href: '/Network',
+              select: false,
+              showItem: false,
+              item: [
+                {
+                  subText: '方法',
+                  subNote: '',
+                  noteClass: '',
+                  href: '#Methods',
+                  select: false
+                },
+                {
+                  subText: '应用场景',
+                  subNote: '',
+                  noteClass: '',
+                  href: '#Scenes',
+                  select: false
+                },
+                {
+                  subText: '代码实例',
+                  subNote: '',
+                  noteClass: '',
+                  href: '#code',
+                  select: false
+                }
+              ]
+            },
+{text: '极光推送',  note: 'JPush', noteClass: '', href: '/JPush', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '信息提示',  note: 'Toast', noteClass: '', href: '/Toast', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '对话框',  note: 'Dialogs', noteClass: '', href: '/Dialogs', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '文件',  note: 'File', noteClass: '', href: '/File', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '文件传输',  note: 'File Transfer', noteClass: '', href: '/FileTransfer', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '打开文件',  note: 'FileOpener2', noteClass: '', href: '/FileOpener2', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '系统相册',  note: 'Image Picker', noteClass: '', href: '/ImagePicker', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '播放音乐',  note: 'Native Audio', noteClass: '', href: '/NativeAudio', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '通讯录管理',  note: 'Contacts', noteClass: '', href: '/Contacts', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '短信',  note: 'SMS', noteClass: '', href: '/SMS', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '内置浏览器',  note: 'In App Browser', noteClass: '', href: '/InAppBrowser', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '应用版本',  note: 'App Version', noteClass: '', href: '/AppVersion', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '应用是否存在',  note: 'App Availability', noteClass: '', href: '/AppAvailability', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '应用评价',  note: 'App Rate', noteClass: '', href: '/AppRate', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '应用配置项',  note: 'App Preferences', noteClass: '', href: '/AppPreferences', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]}
           ]
         },
         {
-          title: 'Apis',
+          title: '设备 Device',
           list: [
-            {
-              text: '/books',
-              note: 'POST',
-              noteClass: '_cl-66bb6a',
-              href: '#',
-              select: false,
-              showItem: false,
-              item: [
-              ]
-            },
-            {
-              text: '/books',
-              note: 'POST',
-              noteClass: '_cl-42a5f5',
-              href: '#',
-              select: false,
-              showItem: false,
-              item: [
-              ]
-            },
-            {
-              text: '/books/:id',
-              note: 'PUT',
-              noteClass: '_cl-7e57c2',
-              href: '#',
-              select: false,
-              showItem: false,
-              item: [
-              ]
-            },
-            {
-              text: '/books/:id',
-              note: 'DELETE',
-              noteClass: '_cl-ff7043',
-              href: '#',
-              select: false,
-              showItem: false,
-              item: [
-              ]
-            }
+{text: '设备信息',  note: 'Device', noteClass: '', href: '/Device', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '电池信息',  note: 'Battery Status', noteClass: '', href: '/BatteryStatus', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '地区/时区',  note: 'Globalization', noteClass: '', href: '/Globalization', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '地理位置',  note: 'Geolocation', noteClass: '', href: '/Geolocation', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '摄像头拍照',  note: 'Camera', noteClass: '', href: '/Camera', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '录制',  note: 'Capture', noteClass: '', href: '/Capture', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '录制音频',  note: 'Media', noteClass: '', href: '/Media', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '条形码/二维码扫描',  note: 'Barcode Scanner', noteClass: '', href: '/BarcodeScanner', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '方向传感器',  note: 'Device Orientation', noteClass: '', href: '/DeviceOrientation', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '陀螺仪传感器',  note: 'Device Motion', noteClass: '', href: '/DeviceMotion', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '闪光灯',  note: 'Flashlight', noteClass: '', href: '/Flashlight', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '震动',  note: 'Vibration', noteClass: '', href: '/Vibration', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: 'iBeacon',  note: 'iBeacon', noteClass: '', href: '/iBeacon', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '蓝牙',  note: 'Bluetooth', noteClass: '', href: '/Bluetooth', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]}
+          ]
+        },
+        {
+          title: '其它 Other',
+          list: [
+{text: 'QQ 微信登陆',  note: 'App Login', noteClass: '', href: '/AppLogin', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]},
+{text: '本地数据库',  note: 'SQLite', noteClass: '', href: '/SQLite', select: false, showItem: false, item: [
+{subText: '方法', subNote: '', noteClass: '', href: '#Methods', select: false
+},{subText: '应用场景', subNote: '', noteClass: '', href: '#Scenes', select: false
+},{subText: '代码实例', subNote: '', noteClass: '', href: '#code', select: false
+}]}
+
+
           ]
         }
       ]
@@ -387,9 +564,9 @@ export default {
   },
   watch: {
     //观察 - 数据或方法变动
-    // 'this.$router': function () {
-    //   console.log(this.$router)
-    // }
+    'this.$router': function () {
+      console.log(this.$router)
+    }
   },
   created() {
     //实例创建完成后
@@ -397,15 +574,15 @@ export default {
   mounted() {
     //挂载实例后 - this.el存在
     let loadCssCode = function (code){
-      var style = document.createElement('style');
-      style.type = 'text/css';
-      style.rel = 'stylesheet';
-      //for Chrome Firefox Opera Safari
-      style.appendChild(document.createTextNode(code));
-      //for IE
-      //style.styleSheet.cssText = code;
-      var head = document.getElementsByTagName('head')[0];
-      head.appendChild(style);
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        style.rel = 'stylesheet';
+        //for Chrome Firefox Opera Safari
+        style.appendChild(document.createTextNode(code));
+        //for IE
+        //style.styleSheet.cssText = code;
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(style);
     }
     loadCssCode(`
       ._PG-index ._UI-menu .ui-l-title {

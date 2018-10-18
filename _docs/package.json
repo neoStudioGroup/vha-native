@@ -1,16 +1,15 @@
 {
-  "name": "vha-Website",
-  "version": "0.1.0",
+  "name": "vha-docs",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "docs:build": "node ./src/pages/_data/process_md-to-html.js"
+    "docs:build": "node ./_data/_process_mdTOhtml.js",
+    "docs:genr": "node ./_data/_gen-router.js"
   },
   "dependencies": {
-    "ant-design-vue": "^1.1.2",
-    "axios": "^0.18.0",
     "highlight.js": "^9.13.0",
     "marked": "^0.5.1",
     "nprogress": "^0.2.0",

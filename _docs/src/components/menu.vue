@@ -11,9 +11,9 @@
   li
     a
       @extend ._clear-a
-      padding 4px 26px
+      padding 4px 28px
       display block
-      font-size 1.1em
+      font-size 1em
       color #777 !important
       // border-left 5px solid transparent
       &:hover
@@ -70,7 +70,9 @@ export default {
     //父组件参数
     pData: {
       type: Array,
-      default: []
+      default:  function () {
+        return []
+      }
     },
     getContainer: {
       type: Function,
@@ -92,9 +94,9 @@ export default {
   },
   methods: {
     //方法 - 进入页面创建
-    onItemshow: function (menusIndex, listIndex) {
-      // this.menus[menusIndex].list[listIndex].showItem = !this.menus[menusIndex].list[listIndex].showItem
-    },
+    // onItemshow: function (menusIndex, listIndex) {
+    //   this.menus[menusIndex].list[listIndex].showItem = !this.menus[menusIndex].list[listIndex].showItem
+    // },
     procURL: function (url) {
       return this.$router.history.base + url
     },
@@ -124,7 +126,6 @@ export default {
       })
       
       window.history.replaceState({}, null, '#' + this.nowElement.id)
-      window.document.title = this.nowElement.id
     },
     handleScroll: function () {
       // 滚动处理

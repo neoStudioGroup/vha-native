@@ -1,14 +1,14 @@
 ---
 {
   "title": "快速开始",
-  "name": "Getting-Started",
+  "name": "Getting Started",
   "time": "2018-10-17 16:33:09"
 }
 ---
-
+<!-- ------------------------------------------- -->
 <section id="documentationgetting_started">
 
-# [Getting Started](#documentationgetting_started)
+# **[Getting Started](#documentationgetting_started)**
 
 <router-link to="/aaa">2222</router-link>
 
@@ -21,10 +21,10 @@ This API is still under development anll under development anll under developmen
 This API is still under development and will evolve.
 <p class="_cl-aaaaaa">You’ll succeed if you do this.</p>
 
-<p class="ui-r-note _bdc-66cc00">You’ll succeed if you do this.</p>
-<p class="ui-r-note _bdc-56adec">Here’s some useful information.</p>
-<p class="ui-r-note _bdc-ffc107">Something may not happen if you try and do this.</p>
-<p class="ui-r-note _bdc-ff2200">Something bad will happen if you do this.</p>
+<p class="ui-r-note _bdc-success">You’ll succeed if you do this.</p>
+<p class="ui-r-note _bdc-info">Here’s some useful information.</p>
+<p class="ui-r-note _bdc-warning">Something may not happen if you try and do this.</p>
+<p class="ui-r-note _bdc-error">Something bad will happen if you do this.</p>
 
 <p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
 

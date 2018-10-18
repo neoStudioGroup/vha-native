@@ -12,8 +12,8 @@ const writeFile = util.promisify(fs.writeFile);
 const marked = require('marked');
 
 let config = {
-  inpath: path.resolve(__dirname, '..') + '\\_data',
-  outpath: path.resolve(__dirname, '..') + '\\index'
+  mdpath: __dirname,
+  outpath: path.resolve(__dirname, '..') + '\\src\\pages\\index'
 };
 
 let Markdown = {
@@ -51,7 +51,7 @@ ${Markdown.HTML}
     // 读取md目录内md文件内容
     for (const element of paths) {
       // 读取文件内容
-      let Content = await readFile(config.inpath + '\\' + element, 'utf-8')
+      let Content = await readFile(config.mdpath + '\\' + element, 'utf-8')
       // console.log('读取文件内容', element)
       
       // 获取到配置信息
@@ -85,7 +85,7 @@ ${Markdown.HTML}
 function getMdPath () {
   return new Promise (async function (resolve, reject) {
     try {
-      let data = await readdir(config.inpath)
+      let data = await readdir(config.mdpath)
       let temp_paths = []
       for (const element of data) {
         if (element.indexOf('.md') != -1) {
