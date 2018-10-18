@@ -13,10 +13,10 @@ Vue.mixin({
   },
   methods: {
     //方法 - 进入页面创建
-    toLink: function (herf, event) {
-      console.log(event)
-      this.$router.push(herf)
-    }
+    // toLink: function (herf, event) {
+    //   // console.log(event)
+    //   this.$router.push(herf)
+    // }
   }
 })
 

@@ -5,9 +5,9 @@ import index from '@/pages/index.vue'
 import GettingStarted from '@/pages/index/Getting-Started.vue'
 
 // 系统 System
-import Splashscreen from '@/pages/index/Splashscreen.vue'
-import StatusBar from '@/pages/index/StatusBar.vue'
-import Network from '@/pages/index/Network.vue'
+import Splashscreen from '@/pages/index/Splashscreen'
+import StatusBar from '@/pages/index/StatusBar'
+import Network from '@/pages/index/Network'
 import Clipboard from '@/pages/index/Clipboard'
 import JPush from '@/pages/index/JPush'
 import Toast from '@/pages/index/Toast'

@@ -564,9 +564,9 @@ export default {
   },
   watch: {
     //观察 - 数据或方法变动
-    'this.$router': function () {
-      console.log(this.$router)
-    }
+    // 'this.$router': function () {
+    //   console.log(this.$router)
+    // }
   },
   created() {
     //实例创建完成后

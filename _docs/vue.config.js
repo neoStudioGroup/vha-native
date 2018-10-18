@@ -21,7 +21,47 @@ module.exports = {
         routes: [
           '/', 
           '/Getting-Started', 
-          '/Splashscreen'
+          
+          // 系统 System
+          '/Splashscreen', 
+          '/StatusBar', 
+          '/Network', 
+          '/Clipboard', 
+          '/JPush', 
+          '/Toast', 
+          '/Dialogs', 
+          '/File', 
+          '/FileTransfer', 
+          '/FileOpener2', 
+          '/NativeAudio', 
+          '/ImagePicker', 
+          '/SMS', 
+          '/Contacts', 
+          '/InAppBrowser', 
+          '/AppVersion', 
+          '/AppAvailability', 
+          '/AppRate', 
+          '/AppPreferences', 
+
+          // 设备 Device
+          '/Device', 
+          '/BatteryStatus', 
+          '/Globalization', 
+          '/Geolocation', 
+          '/Camera', 
+          '/Capture', 
+          '/Media', 
+          '/BarcodeScanner', 
+          '/DeviceOrientation', 
+          '/DeviceMotion', 
+          '/Flashlight', 
+          '/Vibration', 
+          '/iBeacon', 
+          '/Bluetooth', 
+
+          // 其它 Other
+          '/AppLogin', 
+          '/SQLite'
         ],
         postProcessHtml: function (context) {
           var titles = {// 在这里配置每个页面的标题
