@@ -10,19 +10,27 @@
 
 # **[iBeacon](#iBeacon)**
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-iBeacon" target="_blank">cordova-plugin-iBeacon</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-ibeacon" target="_blank">cordova-plugin-ibeacon</a></p>
 
-> cordova plugin add cordova-plugin-iBeacon
+> cordova plugin add cordova-plugin-ibeacon
 
-### 提供的剪贴板管理
+<br />
+
+### 连接iBeacon（低功耗蓝牙）设备以通信 <a class="ui-r-a" href="https://baike.baidu.com/item/iBeacon/13826305?fr=aladdin" target="_blank">什么是iBeacon？</a>
+
+<p class="_cl-aaaaaa">应用场景：室内定位、物联网</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-复制粘贴
 
 </section>
 <!-- ------------------------------------------- -->
@@ -31,15 +39,7 @@
 ## **[代码实例](#code)**
 
 ```javascript
-Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
-},
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) => {
-    this.ptText = text
-    this.logText += "黏贴内容 : " + text + "\n"
-  })
-}
+
 ```
 
 </section>

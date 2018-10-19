@@ -10,19 +10,52 @@
 
 # **[Bluetooth](#Bluetooth)**
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-Bluetooth" target="_blank">cordova-plugin-Bluetooth</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-ble-central" target="_blank">cordova-plugin-ble-central</a></p>
 
-> cordova plugin add cordova-plugin-Bluetooth
+> cordova plugin add cordova-plugin-ble-central
 
-### 提供的剪贴板管理
+<br />
+
+### 调用设备蓝牙连接其它蓝牙设备通信
+
+<p class="ui-r-note _bdc-warning">用户设备需要开启定位服务</p>
+
+<p class="_cl-aaaaaa">应用场景：室外通信、物联网</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-复制粘贴
+<p class="ui-r-note _bdc-info">enable()</p>
+
+是否开启蓝牙
+
+
+<p class="ui-r-note _bdc-info">scan()</p>
+
+扫描周围蓝牙设备
+
+
+<p class="ui-r-note _bdc-info">connect(deviceid)</p>
+
+连接设备
+
+
+<p class="ui-r-note _bdc-info">read(deviceid)</p>
+
+读取数据
+
+
+<p class="ui-r-note _bdc-info">disconnect(deviceid)</p>
+
+断开连接
 
 </section>
 <!-- ------------------------------------------- -->
@@ -31,14 +64,49 @@
 ## **[代码实例](#code)**
 
 ```javascript
-Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
+enable: function () {
+  this.$vha.bluetooth.enable(() => {
+      this.logText += "蓝牙已启用" + "\n"
+    }, (error) => {
+      this.logText += "蓝牙未启用" + error + "\n"
+    }
+  )
 },
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) => {
-    this.ptText = text
-    this.logText += "黏贴内容 : " + text + "\n"
-  })
+scan: function () {
+  this.$vha.bluetooth.scan([], 10, (device) => {
+      this.devices.push(device)
+      console.log(device)
+      this.logText += JSON.stringify(device, null, 2) + "\n"
+    }, (error) => {
+      this.logText += "失败 : " + error + "\n"
+    }
+  )
+},
+connect: function () {
+  this.$vha.bluetooth.connect(this.deviceid, () => {
+      this.logText += "成功" + "\n"
+    }, (error) => {
+      this.logText += "失败 : " + error + "\n"
+    }
+  )
+},
+read: function () {
+  setInterval(() => {
+    this.$vha.bluetooth.read(this.deviceid, this.serviceUUID, this.counterCharacteristic, () => {
+        this.logText += "成功" + "\n"
+      }, (error) => {
+        this.logText += "失败 : " + error + "\n"
+      }
+    )
+  }, 1000)
+},
+disconnect: function () {
+  this.$vha.bluetooth.disconnect(this.deviceid, () => {
+      this.logText += "成功" + "\n"
+    }, (error) => {
+      this.logText += "失败 : " + error + "\n"
+    }
+  )
 }
 ```
 

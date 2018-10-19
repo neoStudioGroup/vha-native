@@ -4,36 +4,49 @@
 <section id="Vibration">
 
 <h1><strong><a href="#Vibration">Vibration</a></strong></h1>
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-Vibration" target="_blank">cordova-plugin-Vibration</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-vibration" target="_blank">cordova-plugin-vibration</a></p>
 
 <blockquote>
-<p>cordova plugin add cordova-plugin-Vibration</p>
+<p>cordova plugin add cordova-plugin-vibration</p>
 </blockquote>
-<h3>提供的剪贴板管理</h3>
+<br />
+
+<h3>使设备发出震动</h3>
+<p class="_cl-aaaaaa">应用场景：消息提示</p>
+
+<ul>
+<li><del>Browser</del></li>
+<li>Android</li>
+<li>iOS</li>
+<li><del>WeChat</del></li>
+</ul>
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-<h2><strong><a href="#Scenes">应用场景</a></strong></h2>
-<p>复制粘贴</p>
+<h2><strong><a href="#Methods">方法</a></strong></h2>
+<p class="ui-r-note _bdc-info">vibrate(time)</p>
+
+<p>开始震动（毫秒）</p>
+<p class="ui-r-return"><span>↪ 返回值：Boolean</span> 成功返回真，失败返回假。</p>
+
 </section>
 <!-- ------------------------------------------- -->
 <section id="code">
 
 <h2><strong><a href="#code">代码实例</a></strong></h2>
-<pre><code class="language-javascript">Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
-},
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) =&gt; {
-    this.ptText = text
-    this.logText += &quot;黏贴内容 : &quot; + text + &quot;\n&quot;
-  })
+<pre><code class="language-javascript">Vibration: function () {
+  this.logText += &quot;震动：&quot; + this.VibrationTime + &quot; 毫秒&quot; + &quot;\n&quot;
+  if (this.$vha.vibration.vibrate(this.VibrationTime)) {
+    this.logText += &quot;成功&quot; + &quot;\n&quot;
+  } else {
+    this.logText += &quot;失败&quot; + &quot;\n&quot;
+  }
 }</code></pre>
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Vibration.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Vibration.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-18 15:49:13</span>
     </section>
   </div>

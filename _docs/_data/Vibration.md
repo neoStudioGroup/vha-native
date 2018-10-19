@@ -10,19 +10,32 @@
 
 # **[Vibration](#Vibration)**
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-Vibration" target="_blank">cordova-plugin-Vibration</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-vibration" target="_blank">cordova-plugin-vibration</a></p>
 
-> cordova plugin add cordova-plugin-Vibration
+> cordova plugin add cordova-plugin-vibration
 
-### 提供的剪贴板管理
+<br />
+
+### 使设备发出震动
+
+<p class="_cl-aaaaaa">应用场景：消息提示</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-复制粘贴
+<p class="ui-r-note _bdc-info">vibrate(time)</p>
+
+开始震动（毫秒）
+
+<p class="ui-r-return"><span>↪ 返回值：Boolean</span> 成功返回真，失败返回假。</p>
 
 </section>
 <!-- ------------------------------------------- -->
@@ -31,14 +44,13 @@
 ## **[代码实例](#code)**
 
 ```javascript
-Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
-},
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) => {
-    this.ptText = text
-    this.logText += "黏贴内容 : " + text + "\n"
-  })
+Vibration: function () {
+  this.logText += "震动：" + this.VibrationTime + " 毫秒" + "\n"
+  if (this.$vha.vibration.vibrate(this.VibrationTime)) {
+    this.logText += "成功" + "\n"
+  } else {
+    this.logText += "失败" + "\n"
+  }
 }
 ```
 

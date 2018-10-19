@@ -158,7 +158,7 @@ prompt: function(){
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Dialogs.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Dialogs.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-18 15:49:13</span>
     </section>
   </div>

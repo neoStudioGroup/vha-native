@@ -22,6 +22,7 @@
 <p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
 <p class="ui-r-return"><span>↪ 返回值：String(any)</span> 回调函数。参数为result</p>
 <p class="ui-r-return"><span>↪ 返回值：Object(any)</span> 对象</p>
+<p class="ui-r-return"><span>↪ 返回值：Boolean</span> 布尔型</p>
 
 <p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
 
@@ -170,7 +171,7 @@
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Getting-Started.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Getting-Started.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-17 16:33:09</span>
     </section>
   </div>

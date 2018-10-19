@@ -52,12 +52,14 @@
   ._UI-content
     // padding 40px
     // background-color white
+    .ui-r-a
+      font-size .8em
+      color #1890ff !important
+      &:hover
+        text-decoration underline
+    
     #lastSection
       font-size 14px
-      a
-        color #1890ff !important
-        &:hover
-          text-decoration underline
       span
         color #aaa
     .ui-r-npm
