@@ -9,20 +9,23 @@
 <blockquote>
 <p>cordova plugin add cordova-plugin-contacts</p>
 </blockquote>
-<h3>显示或隐藏启动屏幕画面</h3>
-<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+<br />
+
+<h3>在设备上读取、创建和删除通讯录</h3>
+<p class="_cl-aaaaaa">应用场景：读取联系人。</p>
 
 <ul>
+<li><del>Browser</del></li>
 <li>Android</li>
 <li>iOS</li>
-<li>WeChat</li>
+<li><del>WeChat</del></li>
 </ul>
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 <h2><strong><a href="#Methods">方法</a></strong></h2>
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">create()</p>
 
 <p>Shows the splashscreen</p>
 <p class="ui-r-note _bdc-info">hide()</p>
@@ -75,7 +78,7 @@ save: function () {
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/src/pages/_data/Contacts.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Contacts.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-18 15:49:13</span>
     </section>
   </div>

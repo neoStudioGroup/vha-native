@@ -14,27 +14,62 @@
 
 > cordova plugin add cordova-plugin-file-transfer
 
-### 显示或隐藏启动屏幕画面
+<br />
 
-<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+### 通过服务器上传或者下载文件
 
+<p class="_cl-aaaaaa">应用场景：图片、应用等。</p>
+
++ ~~Browser~~
 + Android
 + iOS
 + ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 ## **[方法](#Methods)**
 
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info" id="downloadurl-targetpath-options-trusthosts">download(url, targetPath, options, trustHosts)</p>
 
-Shows the splashscreen
+从服务器下载文件
 
-<p class="ui-r-note _bdc-info">hide()</p>
+参数|类型|说明
+-|-|-
+url|String|文件服务器URL下载地址
+targetPath|String|文件保存路径
+options|Object|可选参数
+trustAllHosts|Boolean|如果设置为true，接受所有安全证书
 
-Hides the splashscreen
+返回值|类型|说明
+-|-|-
+success|Object|返回成功下载的文件路径和更多的信息
+progress|Object|返回下载文件的进度
+
+
+<p class="ui-r-note _bdc-info" id="uploadserver-targetpath-options-trustallhosts">upload(server, targetPath, options, trustAllHosts)</p>
+
+上传文件到服务器
+
+参数|类型|说明
+-|-|-
+url|String|服务器上传地址
+targetPath|String|上传文件路径
+options|Object|可选参数
+trustAllHosts|Boolean|如果设置为true，接受所有安全证书
+
+返回值|类型|说明
+-|-|-
+success|Object|返回成功对象的文件路径和更多的信息
+progress|Object|返回上传文件的进度
+
+选项参数是一个Object，有以下几个关键的属性：
+
+属性|类型|说明
+-|-|-
+encodeURI|Boolean|编码服务器的URL使用encodeURI。默认设置为true
+timeout|Integer|超时时间已毫秒为单位
 
 </section>
 <!-- ------------------------------------------- -->

@@ -9,17 +9,20 @@
 <blockquote>
 <p>cordova plugin add cordova-plugin-splashscreen</p>
 </blockquote>
+<br />
+
 <h3>显示或隐藏启动屏幕画面</h3>
-<p class="_cl-aaaaaa">应用场景：启动缓冲、</p>
+<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
 
 <ul>
+<li><del>Browser</del></li>
 <li>Android</li>
 <li>iOS</li>
 <li><del>WeChat</del></li>
 </ul>
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 <h2><strong><a href="#Methods">方法</a></strong></h2>
 <p class="ui-r-note _bdc-info">show()</p>
@@ -45,7 +48,7 @@
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/src/pages/_data/Splashscreen.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Splashscreen.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-18 15:49:13</span>
     </section>
   </div>

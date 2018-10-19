@@ -138,7 +138,7 @@
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/src/pages/_data/Getting Started.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Getting Started.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-17 16:33:09</span>
     </section>
   </div>

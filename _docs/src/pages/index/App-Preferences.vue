@@ -4,36 +4,63 @@
 <section id="App-Preferences">
 
 <h1><strong><a href="#App-Preferences">App Preferences</a></strong></h1>
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-App-Preferences" target="_blank">cordova-plugin-App-Preferences</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-vha-apppreferences" target="_blank">cordova-plugin-vha-apppreferences</a></p>
 
 <blockquote>
-<p>cordova plugin add cordova-plugin-App-Preferences</p>
+<p>cordova plugin add cordova-plugin-vha-apppreferences</p>
 </blockquote>
-<h3>提供的剪贴板管理</h3>
+<br />
+
+<h3>显示或隐藏启动屏幕画面</h3>
+<p class="_cl-aaaaaa">应用场景：本地设置</p>
+
+<ul>
+<li><del>Browser</del></li>
+<li>Android</li>
+<li>iOS</li>
+<li><del>WeChat</del></li>
+</ul>
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-<h2><strong><a href="#Scenes">应用场景</a></strong></h2>
-<p>复制粘贴</p>
+<h2><strong><a href="#Methods">方法</a></strong></h2>
+<p class="ui-r-note _bdc-info">show()</p>
+
+<p>显示启动屏幕</p>
+<p class="ui-r-note _bdc-info">hide()</p>
+
+<p>隐藏启动屏幕</p>
 </section>
 <!-- ------------------------------------------- -->
 <section id="code">
 
 <h2><strong><a href="#code">代码实例</a></strong></h2>
-<pre><code class="language-javascript">Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
+<pre><code class="language-javascript">setkey: function () {
+  this.$vha.apppreferences.store((value) =&gt; {
+    this.logText += value + &quot;\n&quot;
+  }, (error) =&gt; {
+    this.logText += &quot;错误 : &quot; + error + &quot;\n&quot;
+  }, &#39;key:1&#39;, &#39;value:1&#39;)
 },
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) =&gt; {
-    this.ptText = text
-    this.logText += &quot;黏贴内容 : &quot; + text + &quot;\n&quot;
+getkey: function () {
+  this.$vha.apppreferences.fetch((value) =&gt; {
+    this.logText += value + &quot;\n&quot;
+  }, (error) =&gt; {
+    this.logText += &quot;错误 : &quot; + error + &quot;\n&quot;
+  }, &#39;key:1&#39;)
+},
+show: function () {
+  this.$vha.apppreferences.show((value) =&gt; {
+    this.logText += value + &quot;\n&quot;
+  }, (error) =&gt; {
+    this.logText += &quot;错误 : &quot; + error + &quot;\n&quot;
   })
 }</code></pre>
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/src/pages/_data/App Preferences.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/App Preferences.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-18 15:49:13</span>
     </section>
   </div>

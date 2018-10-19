@@ -9,20 +9,23 @@
 <blockquote>
 <p>cordova plugin add cordova-plugin-file-opener2</p>
 </blockquote>
-<h3>显示或隐藏启动屏幕画面</h3>
-<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+<br />
+
+<h3>打开你的设备文件系统的文件 (用默认应用程序)</h3>
+<p class="_cl-aaaaaa">应用场景：打开apk文件安装应用。</p>
 
 <ul>
+<li><del>Browser</del></li>
 <li>Android</li>
 <li>iOS</li>
-<li>WeChat</li>
+<li><del>WeChat</del></li>
 </ul>
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 <h2><strong><a href="#Methods">方法</a></strong></h2>
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">open(filePath, fileMIMEType)</p>
 
 <p>Shows the splashscreen</p>
 <p class="ui-r-note _bdc-info">hide()</p>
@@ -65,7 +68,7 @@ appIsInstalled: function () {
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/src/pages/_data/FileOpener2.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/FileOpener2.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-18 15:49:13</span>
     </section>
   </div>

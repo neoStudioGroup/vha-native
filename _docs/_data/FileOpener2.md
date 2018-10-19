@@ -14,21 +14,24 @@
 
 > cordova plugin add cordova-plugin-file-opener2
 
-### 显示或隐藏启动屏幕画面
+<br />
 
-<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+### 打开你的设备文件系统的文件 (用默认应用程序)
 
+<p class="_cl-aaaaaa">应用场景：打开apk文件安装应用。</p>
+
++ ~~Browser~~
 + Android
 + iOS
 + ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 ## **[方法](#Methods)**
 
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">open(filePath, fileMIMEType)</p>
 
 Shows the splashscreen
 

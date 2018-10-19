@@ -9,25 +9,144 @@
 <blockquote>
 <p>cordova plugin add cordova-plugin-file-transfer</p>
 </blockquote>
-<h3>显示或隐藏启动屏幕画面</h3>
-<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+<br />
+
+<h3>通过服务器上传或者下载文件</h3>
+<p class="_cl-aaaaaa">应用场景：图片、应用等。</p>
 
 <ul>
+<li><del>Browser</del></li>
 <li>Android</li>
 <li>iOS</li>
-<li>WeChat</li>
+<li><del>WeChat</del></li>
 </ul>
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 <h2><strong><a href="#Methods">方法</a></strong></h2>
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info" id="downloadurl-targetpath-options-trusthosts">download(url, targetPath, options, trustHosts)</p>
 
-<p>Shows the splashscreen</p>
-<p class="ui-r-note _bdc-info">hide()</p>
+<p>从服务器下载文件</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>url</td>
+<td>String</td>
+<td>文件服务器URL下载地址</td>
+</tr>
+<tr>
+<td>targetPath</td>
+<td>String</td>
+<td>文件保存路径</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Object</td>
+<td>可选参数</td>
+</tr>
+<tr>
+<td>trustAllHosts</td>
+<td>Boolean</td>
+<td>如果设置为true，接受所有安全证书</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>success</td>
+<td>Object</td>
+<td>返回成功下载的文件路径和更多的信息</td>
+</tr>
+<tr>
+<td>progress</td>
+<td>Object</td>
+<td>返回下载文件的进度</td>
+</tr>
+</tbody></table>
+<p class="ui-r-note _bdc-info" id="uploadserver-targetpath-options-trustallhosts">upload(server, targetPath, options, trustAllHosts)</p>
 
-<p>Hides the splashscreen</p>
+<p>上传文件到服务器</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>url</td>
+<td>String</td>
+<td>服务器上传地址</td>
+</tr>
+<tr>
+<td>targetPath</td>
+<td>String</td>
+<td>上传文件路径</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Object</td>
+<td>可选参数</td>
+</tr>
+<tr>
+<td>trustAllHosts</td>
+<td>Boolean</td>
+<td>如果设置为true，接受所有安全证书</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>success</td>
+<td>Object</td>
+<td>返回成功对象的文件路径和更多的信息</td>
+</tr>
+<tr>
+<td>progress</td>
+<td>Object</td>
+<td>返回上传文件的进度</td>
+</tr>
+</tbody></table>
+<p>选项参数是一个Object，有以下几个关键的属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>encodeURI</td>
+<td>Boolean</td>
+<td>编码服务器的URL使用encodeURI。默认设置为true</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Integer</td>
+<td>超时时间已毫秒为单位</td>
+</tr>
+</tbody></table>
 </section>
 <!-- ------------------------------------------- -->
 <section id="code">
@@ -74,7 +193,7 @@ uploadFile: function(){
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/src/pages/_data/File Transfer.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/File Transfer.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-18 15:49:13</span>
     </section>
   </div>

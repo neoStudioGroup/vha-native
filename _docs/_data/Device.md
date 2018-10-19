@@ -10,19 +10,35 @@
 
 # **[Device](#Device)**
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-Device" target="_blank">cordova-plugin-Device</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-device" target="_blank">cordova-plugin-device</a></p>
 
-> cordova plugin add cordova-plugin-Device
+> cordova plugin add cordova-plugin-device
 
-### 提供的剪贴板管理
+<br />
+
+### 显示或隐藏启动屏幕画面
+
+<p class="_cl-aaaaaa">应用场景：判断平台</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-复制粘贴
+<p class="ui-r-note _bdc-info">show()</p>
+
+显示启动屏幕
+
+
+<p class="ui-r-note _bdc-info">hide()</p>
+
+隐藏启动屏幕
 
 </section>
 <!-- ------------------------------------------- -->
@@ -31,14 +47,15 @@
 ## **[代码实例](#code)**
 
 ```javascript
-Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
-},
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) => {
-    this.ptText = text
-    this.logText += "黏贴内容 : " + text + "\n"
-  })
+device: function () {
+  this.logText += "device : " + JSON.stringify(this.$vha.device, null, 2) + "\n"
+  this.logText += "cordova : " + this.$vha.device.cordova + "\n"
+  this.logText += "model : " + this.$vha.device.model + "\n"
+  this.logText += "name : " + this.$vha.device.name + "\n"
+  this.logText += "platform : " + this.$vha.device.platform + "\n"
+  this.logText += "uuid : " + this.$vha.device.uuid + "\n"
+  this.logText += "version : " + this.$vha.device.version + "\n"
+  this.logText += "manufacturer : " + this.$vha.device.manufacturer + "\n"
 }
 ```
 

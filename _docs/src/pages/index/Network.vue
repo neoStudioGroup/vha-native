@@ -4,13 +4,22 @@
 <section id="Network">
 
 <h1><strong><a href="#Network">Network</a></strong></h1>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-network-information" target="_blank">cordova-plugin-network-information</a></p>
+
 <blockquote>
-<p>cordova plugin add cordova-plugin-Network</p>
+<p>cordova plugin add cordova-plugin-network-information</p>
 </blockquote>
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-Network" target="_blank">cordova-plugin-Network</a></p>
 <br />
 
 <h3>该插件提供了一个旧版本的网络信息接口的实现。它提供了有关设备的移动网和WiFi连接信息和设备是否有网络连接。</h3>
+<p class="_cl-aaaaaa">应用场景：禁止登陆、获取数据等。</p>
+
+<ul>
+<li><del>Browser</del></li>
+<li>Android</li>
+<li>iOS</li>
+<li><del>WeChat</del></li>
+</ul>
 </section>
 <!-- ------------------------------------------- -->
 <section id="Methods">
@@ -19,7 +28,8 @@
 <p class="ui-r-note _bdc-info">getNetwork()</p>
 
 <p>提供了一个快速的方法来确定设备的网络连接状态，和类型的连接。</p>
-<p>返回值 Connection Object:</p>
+<p class="ui-r-return"><span>↪ 返回值：</span> Connection Object:</p>
+
 <table>
 <thead>
 <tr>
@@ -63,12 +73,16 @@
 <p class="ui-r-note _bdc-info">isOnline()</p>
 
 <p>检测手机网络是否在线</p>
-<p>返回值 如果为true手机网络在线</p>
-<h3><strong>事件(Event)</strong></h3>
+<p class="ui-r-return"><span>↪ 返回值：</span> 如果为true手机网络在线</p>
+
+<br />
+
+<h3><strong>事件 (Event)</strong></h3>
 <p class="ui-r-note _bdc-success">$cordovaNetwork:online</p>
 
 <p>监听$cordovaNetwork:online当手机上网时触发事件</p>
-<p><strong>返回值</strong></p>
+<p class="ui-r-return"><span>↪ 返回值：</span></p>
+
 <table>
 <thead>
 <tr>
@@ -91,7 +105,8 @@
 <p class="ui-r-note _bdc-success">$cordovaNetwork:offline</p>
 
 <p>监听$cordovaNetwork:offline当手机网络离线时触发事件</p>
-<p><strong>返回值</strong></p>
+<p class="ui-r-return"><span>↪ 返回值：</span></p>
+
 <table>
 <thead>
 <tr>
@@ -113,12 +128,6 @@
 </tbody></table>
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
-
-<h2><strong><a href="#Scenes">应用场景</a></strong></h2>
-<p>禁止登陆、获取数据等。</p>
-</section>
-<!-- ------------------------------------------- -->
 <section id="code">
 
 <h2><strong><a href="#code">代码实例</a></strong></h2>
@@ -136,7 +145,7 @@ Network_isOffline: function(){
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/src/pages/_data/Network.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Network.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-18 15:49:13</span>
     </section>
   </div>

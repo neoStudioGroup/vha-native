@@ -4,6 +4,8 @@
 
 <h1><a href="#documentationgetting_started">Getting Started</a></h1>
 <p><router-link to="/aaa">2222</router-link></p>
+<br />
+
 <p>Welcome to our API.</p>
 <p>This API document is designed for those interested in developing for our platform.</p>
 <p>This API is still under development anll under development anll under development anll under development anll under development anll under development anll under development anll under development and will evolve.</p>
@@ -14,6 +16,9 @@
 <p class="ui-r-note _bdc-info">Here’s some useful information.</p>
 <p class="ui-r-note _bdc-warning">Something may not happen if you try and do this.</p>
 <p class="ui-r-note _bdc-error">Something bad will happen if you do this.</p>
+
+<h3><strong>事件 (Event)</strong></h3>
+<p class="ui-r-return"><span>↪ 返回值：Promise(any)</span> 复制后返回一个Promise对象</p>
 
 <p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
 
@@ -27,6 +32,31 @@
   <dd>The book's score between 0 and 5</dd>
 </dl>
 
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>networkState</td>
+<td>String</td>
+<td>网络连接类型</td>
+</tr>
+<tr>
+<td>networkState</td>
+<td>String</td>
+<td>网络连接类型</td>
+</tr>
+<tr>
+<td>networkState</td>
+<td>String</td>
+<td>网络连接类型</td>
+</tr>
+</tbody></table>
 <table>
 <thead>
 <tr>
@@ -56,6 +86,18 @@
 <td>We couldn’t authenticate you</td>
 </tr>
 </tbody></table>
+<pre><code class="language-javascript">StatusBaroverlaysWebView: function () {
+  this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
+  if(this.overlaysWebViewtruefalse){
+    this.logText += &quot;设置 overlaysWebView = false&quot; + &quot;\n&quot;
+    this.overlaysWebViewtruefalse = false
+    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
+  }else{
+    this.logText += &quot;设置 overlaysWebView = true&quot; + &quot;\n&quot;
+    this.overlaysWebViewtruefalse = true
+    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
+  }
+}</code></pre>
 </section>
 <!-- ------------------------------------------- -->
 <section id="documentationauthentication">
@@ -95,18 +137,6 @@
 <section id="documentationerrors">
 
 <h1><a href="#documentationerrors">Errors</a></h1>
-<pre><code class="language-javascript">StatusBaroverlaysWebView: function () {
-  this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  if(this.overlaysWebViewtruefalse){
-    this.logText += &quot;设置 overlaysWebView = false&quot; + &quot;\n&quot;
-    this.overlaysWebViewtruefalse = false
-    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  }else{
-    this.logText += &quot;设置 overlaysWebView = true&quot; + &quot;\n&quot;
-    this.overlaysWebViewtruefalse = true
-    this.$vha.statusbar.overlaysWebView(this.overlaysWebViewtruefalse)
-  }
-}</code></pre>
 <p>333333333</p>
 <p>333333333</p>
 <p>333333333</p>
@@ -137,7 +167,7 @@
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/src/pages/_data/Getting-Started.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Getting-Started.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-17 16:33:09</span>
     </section>
   </div>

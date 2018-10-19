@@ -10,19 +10,35 @@
 
 # **[Battery Status](#Battery-Status)**
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-Battery-Status" target="_blank">cordova-plugin-Battery-Status</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-battery-status" target="_blank">cordova-plugin-battery-status</a></p>
 
-> cordova plugin add cordova-plugin-Battery-Status
+> cordova plugin add cordova-plugin-battery-status
 
-### 提供的剪贴板管理
+<br />
+
+### 显示或隐藏启动屏幕画面
+
+<p class="_cl-aaaaaa">应用场景：低电警告</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-复制粘贴
+<p class="ui-r-note _bdc-info">show()</p>
+
+显示启动屏幕
+
+
+<p class="ui-r-note _bdc-info">hide()</p>
+
+隐藏启动屏幕
 
 </section>
 <!-- ------------------------------------------- -->
@@ -31,14 +47,18 @@
 ## **[代码实例](#code)**
 
 ```javascript
-Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
-},
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) => {
-    this.ptText = text
-    this.logText += "黏贴内容 : " + text + "\n"
-  })
+BatteryStatus: function () {
+  window.addEventListener("batterystatus", (status) => {
+    this.logText += "电量: " + status.level + " 是否充电: " + status.isPlugged + "\n"
+  }, false)
+
+  window.addEventListener("batterylow", (status) => {
+    this.logText += "低电量: " + status.level + "\n"
+  }, false)
+
+  window.addEventListener("batterycritical", (status) => {
+    this.logText += "电量极低: " + status.level + "\n"
+  }, false)
 }
 ```
 

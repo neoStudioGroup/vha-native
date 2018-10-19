@@ -14,23 +14,27 @@
 
 > cordova plugin add cordova-plugin-splashscreen
 
+<br />
+
 ### 显示或隐藏启动屏幕画面
 
-<p class="_cl-aaaaaa">应用场景：启动缓冲、</p>
+<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
 
++ ~~Browser~~
 + Android
 + iOS
 + ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 ## **[方法](#Methods)**
 
 <p class="ui-r-note _bdc-info">show()</p>
 
 显示启动屏幕
+
 
 <p class="ui-r-note _bdc-info">hide()</p>
 

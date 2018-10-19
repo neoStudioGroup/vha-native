@@ -14,21 +14,24 @@
 
 > cordova plugin add cordova-plugin-nativeaudio
 
-### 显示或隐藏启动屏幕画面
+<br />
 
-<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+### Cordova / PhoneGap 3.5 +本地音频播放，针对HTML5游戏和音频应用所需的最小延迟，复调和并发。
 
+<p class="_cl-aaaaaa">应用场景：提示音。</p>
+
++ ~~Browser~~
 + Android
 + iOS
 + ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 ## **[方法](#Methods)**
 
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">preloadSimple(id, assetPath)</p>
 
 Shows the splashscreen
 

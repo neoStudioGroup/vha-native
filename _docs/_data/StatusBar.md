@@ -10,20 +10,38 @@
 
 # **[StatusBar](#StatusBar)**
 
-> cordova plugin add cordova-plugin-StatusBar
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-statusbar" target="_blank">cordova-plugin-statusbar</a></p>
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-StatusBar" target="_blank">cordova-plugin-StatusBar</a></p>
+> cordova plugin add cordova-plugin-statusbar
+
 <br />
 
 ### 配置设备的状态栏颜色和样式。
 
+<p class="_cl-aaaaaa">应用场景：全屏展示</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
+
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-全屏展示
+<p class="ui-r-note _bdc-info">overlaysWebView(doesOverlay)</p>
+
+设置状态栏是否占用视图（默认为true）
+
+参数|类型|说明
+-|-|-
+doesOverlay|boolean|状态栏是否覆盖主应用程序视图。
+
+<p class="ui-r-note _bdc-info">styleDefault()</p>
+
+设置状态栏样式
 
 </section>
 <!-- ------------------------------------------- -->

@@ -10,19 +10,35 @@
 
 # **[App Preferences](#App-Preferences)**
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-App-Preferences" target="_blank">cordova-plugin-App-Preferences</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-vha-apppreferences" target="_blank">cordova-plugin-vha-apppreferences</a></p>
 
-> cordova plugin add cordova-plugin-App-Preferences
+> cordova plugin add cordova-plugin-vha-apppreferences
 
-### 提供的剪贴板管理
+<br />
+
+### 显示或隐藏启动屏幕画面
+
+<p class="_cl-aaaaaa">应用场景：本地设置</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-复制粘贴
+<p class="ui-r-note _bdc-info">show()</p>
+
+显示启动屏幕
+
+
+<p class="ui-r-note _bdc-info">hide()</p>
+
+隐藏启动屏幕
 
 </section>
 <!-- ------------------------------------------- -->
@@ -31,13 +47,25 @@
 ## **[代码实例](#code)**
 
 ```javascript
-Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
+setkey: function () {
+  this.$vha.apppreferences.store((value) => {
+    this.logText += value + "\n"
+  }, (error) => {
+    this.logText += "错误 : " + error + "\n"
+  }, 'key:1', 'value:1')
 },
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) => {
-    this.ptText = text
-    this.logText += "黏贴内容 : " + text + "\n"
+getkey: function () {
+  this.$vha.apppreferences.fetch((value) => {
+    this.logText += value + "\n"
+  }, (error) => {
+    this.logText += "错误 : " + error + "\n"
+  }, 'key:1')
+},
+show: function () {
+  this.$vha.apppreferences.show((value) => {
+    this.logText += value + "\n"
+  }, (error) => {
+    this.logText += "错误 : " + error + "\n"
   })
 }
 ```

@@ -14,21 +14,24 @@
 
 > cordova plugin add cordova-plugin-contacts
 
-### 显示或隐藏启动屏幕画面
+<br />
 
-<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+### 在设备上读取、创建和删除通讯录
 
+<p class="_cl-aaaaaa">应用场景：读取联系人。</p>
+
++ ~~Browser~~
 + Android
 + iOS
 + ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 ## **[方法](#Methods)**
 
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">create()</p>
 
 Shows the splashscreen
 

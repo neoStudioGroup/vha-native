@@ -9,25 +9,27 @@
 <blockquote>
 <p>cordova plugin add cordova-plugin-mediapicker-dmcbig</p>
 </blockquote>
-<h3>显示或隐藏启动屏幕画面</h3>
-<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+<br />
+
+<h3>支持静态、多图、视频和gif的图像选择器</h3>
+<p class="_cl-aaaaaa">应用场景：用户头像。</p>
 
 <ul>
+<li><del>Browser</del></li>
 <li>Android</li>
 <li>iOS</li>
-<li>WeChat</li>
+<li><del>WeChat</del></li>
 </ul>
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 <h2><strong><a href="#Methods">方法</a></strong></h2>
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">compressImage(option, result, error)</p>
 
-<p>Shows the splashscreen</p>
-<p class="ui-r-note _bdc-info">hide()</p>
+<p>打开图像选择器</p>
+<p class="ui-r-return"><span>↪ 返回值：data</span> 图像的信息</p>
 
-<p>Hides the splashscreen</p>
 </section>
 <!-- ------------------------------------------- -->
 <section id="code">
@@ -61,7 +63,7 @@
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/src/pages/_data/Image Picker.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Image Picker.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-18 15:49:13</span>
     </section>
   </div>

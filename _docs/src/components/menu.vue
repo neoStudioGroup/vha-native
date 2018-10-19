@@ -7,7 +7,7 @@
     font-size 1rem
     font-weight 700
     letter-spacing 1px
-    color #888
+    color #666
   li
     a
       @extend ._clear-a

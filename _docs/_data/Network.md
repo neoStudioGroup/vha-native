@@ -1,6 +1,6 @@
 ---
 {
-  "title": "状态栏",
+  "title": "网络状态",
   "name": "Network",
   "time": "2018-10-18 15:49:13"
 }
@@ -10,12 +10,20 @@
 
 # **[Network](#Network)**
 
-> cordova plugin add cordova-plugin-Network
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-network-information" target="_blank">cordova-plugin-network-information</a></p>
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-Network" target="_blank">cordova-plugin-Network</a></p>
+> cordova plugin add cordova-plugin-network-information
+
 <br />
 
 ### 该插件提供了一个旧版本的网络信息接口的实现。它提供了有关设备的移动网和WiFi连接信息和设备是否有网络连接。
+
+<p class="_cl-aaaaaa">应用场景：禁止登陆、获取数据等。</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
@@ -27,7 +35,7 @@
 
 提供了一个快速的方法来确定设备的网络连接状态，和类型的连接。
 
-返回值 Connection Object:
+<p class="ui-r-return"><span>↪ 返回值：</span> Connection Object:</p>
 
 Connection Type(连接类型)|说明
 -|-
@@ -44,15 +52,17 @@ Connection.NONE|无网络连接
 
 检测手机网络是否在线
 
-返回值 如果为true手机网络在线
+<p class="ui-r-return"><span>↪ 返回值：</span> 如果为true手机网络在线</p>
 
-### **事件(Event)**
+<br />
+
+### **事件 (Event)**
 
 <p class="ui-r-note _bdc-success">$cordovaNetwork:online</p>
 
 监听$cordovaNetwork:online当手机上网时触发事件
 
-**返回值**
+<p class="ui-r-return"><span>↪ 返回值：</span></p>
 
 参数|类型|说明
 -|-|-
@@ -63,20 +73,12 @@ networkState|Object|网络连接类型,具体参考getNetwork()的返回值
 
 监听$cordovaNetwork:offline当手机网络离线时触发事件
 
-**返回值**
+<p class="ui-r-return"><span>↪ 返回值：</span></p>
 
 参数|类型|说明
 -|-|-
 event|Object|事件 $broadcast
 networkState|Object|网络连接类型,具体参考getNetwork()的返回值
-
-</section>
-<!-- ------------------------------------------- -->
-<section id="Scenes">
-
-## **[应用场景](#Scenes)**
-
-禁止登陆、获取数据等。
 
 </section>
 <!-- ------------------------------------------- -->

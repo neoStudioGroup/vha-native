@@ -10,19 +10,35 @@
 
 # **[App Availability](#App-Availability)**
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-App-Availability" target="_blank">cordova-plugin-App-Availability</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-appavailability" target="_blank">cordova-plugin-appavailability</a></p>
 
-> cordova plugin add cordova-plugin-App-Availability
+> cordova plugin add cordova-plugin-appavailability
 
-### 提供的剪贴板管理
+<br />
+
+### 显示或隐藏启动屏幕画面
+
+<p class="_cl-aaaaaa">应用场景：更新检测</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-复制粘贴
+<p class="ui-r-note _bdc-info">show()</p>
+
+显示启动屏幕
+
+
+<p class="ui-r-note _bdc-info">hide()</p>
+
+隐藏启动屏幕
 
 </section>
 <!-- ------------------------------------------- -->
@@ -31,13 +47,20 @@
 ## **[代码实例](#code)**
 
 ```javascript
-Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
-},
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) => {
-    this.ptText = text
-    this.logText += "黏贴内容 : " + text + "\n"
+check: function () {
+  let scheme
+
+  if(this.$vha.device.platform === 'iOS') {
+    scheme = 'twitter://'
+  }
+  else if(this.$vha.device.platform === 'Android') {
+    scheme = 'com.twitter.android'
+  }
+  
+  this.$vha.appavailability.check(scheme, () => { 
+    this.logText += "twitter已安装" + "\n"
+  }, () => {
+    this.logText += "twitter未安装" + "\n"
   })
 }
 ```

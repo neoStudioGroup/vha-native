@@ -17,6 +17,8 @@
       <p class="ui-r-note _bdc-warning">Something may not happen if you try and do this.</p>
       <p class="ui-r-note _bdc-error">Something bad will happen if you do this.</p>
       
+      <p class="ui-r-return"><span>↪ 返回值：Promise(any)</span> 复制后返回一个Promise对象</p>
+      
       <p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
       
       <blockquote>

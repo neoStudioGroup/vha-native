@@ -10,19 +10,35 @@
 
 # **[Globalization](#Globalization)**
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-Globalization" target="_blank">cordova-plugin-Globalization</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-globalization" target="_blank">cordova-plugin-globalization</a></p>
 
-> cordova plugin add cordova-plugin-Globalization
+> cordova plugin add cordova-plugin-globalization
 
-### 提供的剪贴板管理
+<br />
+
+### 显示或隐藏启动屏幕画面
+
+<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-复制粘贴
+<p class="ui-r-note _bdc-info">show()</p>
+
+显示启动屏幕
+
+
+<p class="ui-r-note _bdc-info">hide()</p>
+
+隐藏启动屏幕
 
 </section>
 <!-- ------------------------------------------- -->
@@ -31,15 +47,28 @@
 ## **[代码实例](#code)**
 
 ```javascript
-Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
-},
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) => {
-    this.ptText = text
-    this.logText += "黏贴内容 : " + text + "\n"
-  })
-}
+    Globalization: function () {
+      this.$vha.globalization.getPreferredLanguage((result) => {
+        this.logText += "首选语言：" + result.value + "\n"
+      },
+      (err) => {
+        this.logText += "错误" + err + "\n"
+      })
+      
+      this.$vha.globalization.getLocaleName((result) => {
+        this.logText += "区域名称：" + result.value + "\n"
+      },
+      (err) => {
+        this.logText += "错误" + err + "\n"
+      })
+      
+      this.$vha.globalization.getFirstDayOfWeek((result) => {
+        this.logText += "第一周：" + result.value + "\n"
+      },
+      (err) => {
+        this.logText += "错误" + err + "\n"
+      })
+    }
 ```
 
 </section>

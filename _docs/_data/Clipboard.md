@@ -10,19 +10,38 @@
 
 # **[Clipboard](#Clipboard)**
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-Clipboard" target="_blank">cordova-plugin-Clipboard</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-vha-clipboard" target="_blank">cordova-plugin-vha-clipboard</a></p>
 
-> cordova plugin add cordova-plugin-Clipboard
+> cordova plugin add cordova-plugin-vha-clipboard
+
+<br />
 
 ### Cordova/PhoneGap剪贴板插件支持iOS，Android和Windows Phone 8提供的剪贴板管理。
 
+<p class="_cl-aaaaaa">应用场景：复制粘贴</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
+
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-复制粘贴
+<p class="ui-r-note _bdc-info">copy(text)</p>
+
+将文本复制到剪贴板
+
+<p class="ui-r-return"><span>↪ 返回值：Promise(any)</span> 复制后返回一个Promise对象</p>
+
+<p class="ui-r-note _bdc-info">paste()</p>
+
+粘贴剪贴板中的文本
+
+<p class="ui-r-return"><span>↪ 返回值：Promise(any)</span> 粘贴后返回一个Promise对象</p>
 
 </section>
 <!-- ------------------------------------------- -->

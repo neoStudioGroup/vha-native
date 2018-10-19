@@ -14,27 +14,28 @@
 
 > cordova plugin add cordova-plugin-mediapicker-dmcbig
 
-### 显示或隐藏启动屏幕画面
+<br />
 
-<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+### 支持静态、多图、视频和gif的图像选择器
 
+<p class="_cl-aaaaaa">应用场景：用户头像。</p>
+
++ ~~Browser~~
 + Android
 + iOS
 + ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 ## **[方法](#Methods)**
 
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">compressImage(option, result, error)</p>
 
-Shows the splashscreen
+打开图像选择器
 
-<p class="ui-r-note _bdc-info">hide()</p>
-
-Hides the splashscreen
+<p class="ui-r-return"><span>↪ 返回值：data</span> 图像的信息</p>
 
 </section>
 <!-- ------------------------------------------- -->

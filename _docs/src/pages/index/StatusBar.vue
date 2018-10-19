@@ -4,19 +4,47 @@
 <section id="StatusBar">
 
 <h1><strong><a href="#StatusBar">StatusBar</a></strong></h1>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-statusbar" target="_blank">cordova-plugin-statusbar</a></p>
+
 <blockquote>
-<p>cordova plugin add cordova-plugin-StatusBar</p>
+<p>cordova plugin add cordova-plugin-statusbar</p>
 </blockquote>
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-StatusBar" target="_blank">cordova-plugin-StatusBar</a></p>
 <br />
 
 <h3>配置设备的状态栏颜色和样式。</h3>
+<p class="_cl-aaaaaa">应用场景：全屏展示</p>
+
+<ul>
+<li><del>Browser</del></li>
+<li>Android</li>
+<li>iOS</li>
+<li><del>WeChat</del></li>
+</ul>
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-<h2><strong><a href="#Scenes">应用场景</a></strong></h2>
-<p>全屏展示</p>
+<h2><strong><a href="#Methods">方法</a></strong></h2>
+<p class="ui-r-note _bdc-info">overlaysWebView(doesOverlay)</p>
+
+<p>设置状态栏是否占用视图（默认为true）</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>doesOverlay</td>
+<td>boolean</td>
+<td>状态栏是否覆盖主应用程序视图。</td>
+</tr>
+</tbody></table>
+<p class="ui-r-note _bdc-info">styleDefault()</p>
+
+<p>设置状态栏样式</p>
 </section>
 <!-- ------------------------------------------- -->
 <section id="code">
@@ -98,7 +126,7 @@ StatusBarshowhide: function(){
 </section>
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
-      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/src/pages/_data/StatusBar.md" target="_blank">在 GitHub 上编辑此页</a>
+      <a href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/StatusBar.md" target="_blank">在 GitHub 上编辑此页</a>
       <span>上次更新：2018-10-18 15:49:13</span>
     </section>
   </div>

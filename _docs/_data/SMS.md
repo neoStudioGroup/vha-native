@@ -14,23 +14,32 @@
 
 > cordova plugin add cordova-sms-plugin
 
-### 显示或隐藏启动屏幕画面
+<br />
 
-<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+### 使用设备发送短信
 
+<p class="_cl-aaaaaa">应用场景：用户验证、登陆验证。</p>
+
++ ~~Browser~~
 + Android
 + iOS
 + ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
 ## **[方法](#Methods)**
 
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">send(phoneNumber, message, options)</p>
 
-Shows the splashscreen
+向目标手机发送短信（需要用户受权）
+
+Param|Type|Details
+-|-|-
+phoneNumber|string\|Array.&#60;string&#62;|Phone number
+message|string|Message
+options|SmsOptions|Options
 
 <p class="ui-r-note _bdc-info">hide()</p>
 
