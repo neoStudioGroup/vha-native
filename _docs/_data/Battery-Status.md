@@ -16,7 +16,7 @@
 
 <br />
 
-### 显示或隐藏启动屏幕画面
+### 监听获取当前设备电量
 
 <p class="_cl-aaaaaa">应用场景：低电警告</p>
 
@@ -31,14 +31,19 @@
 
 ## **[方法](#Methods)**
 
-<p class="ui-r-note _bdc-info">show()</p>
+### **事件 (Event)**
 
-显示启动屏幕
+<p class="ui-r-note _bdc-success">batterystatus</p>
 
+监听后触发此事件
 
-<p class="ui-r-note _bdc-info">hide()</p>
+<p class="ui-r-note _bdc-success">batterylow</p>
 
-隐藏启动屏幕
+低电量时触发此事件
+
+<p class="ui-r-note _bdc-success">batterycritical</p>
+
+电量极低时触发此事件
 
 </section>
 <!-- ------------------------------------------- -->

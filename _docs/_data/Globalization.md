@@ -16,9 +16,9 @@
 
 <br />
 
-### 显示或隐藏启动屏幕画面
+### 获取设备的语言及区域
 
-<p class="_cl-aaaaaa">应用场景：启动缓冲</p>
+<p class="_cl-aaaaaa">应用场景：匹配语言</p>
 
 + ~~Browser~~
 + Android
@@ -31,14 +31,25 @@
 
 ## **[方法](#Methods)**
 
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">getPreferredLanguage()</p>
 
-显示启动屏幕
+获取设备语言
+
+<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
 
 
-<p class="ui-r-note _bdc-info">hide()</p>
+<p class="ui-r-note _bdc-info">getLocaleName()</p>
 
-隐藏启动屏幕
+获取区域名称
+
+<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
+
+
+<p class="ui-r-note _bdc-info">getFirstDayOfWeek()</p>
+
+获取星期数
+
+<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
 
 </section>
 <!-- ------------------------------------------- -->
@@ -47,28 +58,28 @@
 ## **[代码实例](#code)**
 
 ```javascript
-    Globalization: function () {
-      this.$vha.globalization.getPreferredLanguage((result) => {
-        this.logText += "首选语言：" + result.value + "\n"
-      },
-      (err) => {
-        this.logText += "错误" + err + "\n"
-      })
-      
-      this.$vha.globalization.getLocaleName((result) => {
-        this.logText += "区域名称：" + result.value + "\n"
-      },
-      (err) => {
-        this.logText += "错误" + err + "\n"
-      })
-      
-      this.$vha.globalization.getFirstDayOfWeek((result) => {
-        this.logText += "第一周：" + result.value + "\n"
-      },
-      (err) => {
-        this.logText += "错误" + err + "\n"
-      })
-    }
+Globalization: function () {
+  this.$vha.globalization.getPreferredLanguage((result) => {
+    this.logText += "首选语言：" + result.value + "\n"
+  },
+  (err) => {
+    this.logText += "错误" + err + "\n"
+  })
+  
+  this.$vha.globalization.getLocaleName((result) => {
+    this.logText += "区域名称：" + result.value + "\n"
+  },
+  (err) => {
+    this.logText += "错误" + err + "\n"
+  })
+  
+  this.$vha.globalization.getFirstDayOfWeek((result) => {
+    this.logText += "第一周：" + result.value + "\n"
+  },
+  (err) => {
+    this.logText += "错误" + err + "\n"
+  })
+}
 ```
 
 </section>

@@ -1,6 +1,6 @@
 ---
 {
-  "title": "启动屏幕",
+  "title": "应用评价",
   "name": "App Rate",
   "time": "2018-10-18 15:49:13"
 }
@@ -16,7 +16,7 @@
 
 <br />
 
-### 显示或隐藏启动屏幕画面
+### 打开默认设备内应用商店，提示用户评分。
 
 <p class="_cl-aaaaaa">应用场景：打开应用商店</p>
 
@@ -31,14 +31,9 @@
 
 ## **[方法](#Methods)**
 
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">promptForRating()</p>
 
-显示启动屏幕
-
-
-<p class="ui-r-note _bdc-info">hide()</p>
-
-隐藏启动屏幕
+打开设备应用商店
 
 </section>
 <!-- ------------------------------------------- -->

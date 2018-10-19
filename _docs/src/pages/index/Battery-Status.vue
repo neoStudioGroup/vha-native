@@ -11,7 +11,7 @@
 </blockquote>
 <br />
 
-<h3>显示或隐藏启动屏幕画面</h3>
+<h3>监听获取当前设备电量</h3>
 <p class="_cl-aaaaaa">应用场景：低电警告</p>
 
 <ul>
@@ -25,12 +25,16 @@
 <section id="Methods">
 
 <h2><strong><a href="#Methods">方法</a></strong></h2>
-<p class="ui-r-note _bdc-info">show()</p>
+<h3><strong>事件 (Event)</strong></h3>
+<p class="ui-r-note _bdc-success">batterystatus</p>
 
-<p>显示启动屏幕</p>
-<p class="ui-r-note _bdc-info">hide()</p>
+<p>监听后触发此事件</p>
+<p class="ui-r-note _bdc-success">batterylow</p>
 
-<p>隐藏启动屏幕</p>
+<p>低电量时触发此事件</p>
+<p class="ui-r-note _bdc-success">batterycritical</p>
+
+<p>电量极低时触发此事件</p>
 </section>
 <!-- ------------------------------------------- -->
 <section id="code">

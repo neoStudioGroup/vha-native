@@ -10,19 +10,35 @@
 
 # **[Media](#Media)**
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-Media" target="_blank">cordova-plugin-Media</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-media" target="_blank">cordova-plugin-media</a></p>
 
-> cordova plugin add cordova-plugin-Media
+> cordova plugin add cordova-plugin-media
 
-### 提供的剪贴板管理
+<br />
+
+### 调用设备麦克风录音。
+
+<p class="_cl-aaaaaa">应用场景：语音消息</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-复制粘贴
+<p class="ui-r-note _bdc-info">startRecord()</p>
+
+开始录音
+
+
+<p class="ui-r-note _bdc-info">stopRecord()</p>
+
+停止录音
 
 </section>
 <!-- ------------------------------------------- -->
@@ -31,14 +47,58 @@
 ## **[代码实例](#code)**
 
 ```javascript
-Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
+Record: function () {
+  if (this.btntext === "开始录音") {
+    this.btntext = "停止录音"
+            
+    this.recordMedia = new Media(this.$vha.file.const.externalDataDirectory + "Record.mp3",
+      (success) => {
+        console.log("成功 : ", success)
+        this.logText += "成功 : " + success + "\n"
+      }, (error) => {
+        console.log("错误 : ", error)
+        this.logText += "错误 : " + error + "\n"
+      }, (status) => {
+        console.log("状态 : ", status)
+        this.logText += "状态 : " + status + "\n"
+      })
+    
+    this.recordMedia.startRecord()
+  } else {
+    this.btntext = "开始录音"
+    this.recordMedia.stopRecord()
+    this.recordMedia.release()
+    this.recordMedia = undefined
+  }
 },
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) => {
-    this.ptText = text
-    this.logText += "黏贴内容 : " + text + "\n"
-  })
+playRecord: function () {
+  let media = new Media(this.$vha.file.const.externalDataDirectory + "Record.mp3",
+    (success) => {
+      console.log("成功 : ", success)
+      this.logText += "成功 : " + success + "\n"
+      media.release()
+    }, (error) => {
+      console.log("错误 : ", error)
+      this.logText += "错误 : " + error + "\n"
+      media.release()
+    }, (status) => {
+      console.log("状态 : ", status)
+      this.logText += "状态 : " + status + "\n"
+    })      
+  
+  var iOSPlayOptions = {
+    numberOfLoops: 2,
+    playAudioWhenScreenIsLocked: false
+  }
+
+  if (this.$vha.device.platform != "Android") {
+    media.play(iOSPlayOptions) // iOS only!
+  }else{
+    media.play() // Android
+  }
+  
+  // media.pause()
+  // media.stop()
 }
 ```
 

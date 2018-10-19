@@ -16,7 +16,7 @@
 
 <br />
 
-### 显示或隐藏启动屏幕画面
+### 检测设备上是否安装了某些应用
 
 <p class="_cl-aaaaaa">应用场景：更新检测</p>
 
@@ -31,14 +31,9 @@
 
 ## **[方法](#Methods)**
 
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">check()</p>
 
-显示启动屏幕
-
-
-<p class="ui-r-note _bdc-info">hide()</p>
-
-隐藏启动屏幕
+检查
 
 </section>
 <!-- ------------------------------------------- -->

@@ -11,7 +11,7 @@
 </blockquote>
 <br />
 
-<h3>显示或隐藏启动屏幕画面</h3>
+<h3>获取应用的基本信息（包括名称、包名称（xx.xxx.xxx）、标识符及版本号）</h3>
 <p class="_cl-aaaaaa">应用场景：应用升级</p>
 
 <ul>
@@ -25,12 +25,29 @@
 <section id="Methods">
 
 <h2><strong><a href="#Methods">方法</a></strong></h2>
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">getAppName()</p>
 
-<p>显示启动屏幕</p>
-<p class="ui-r-note _bdc-info">hide()</p>
+<p>获取应用名称</p>
+<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
 
-<p>隐藏启动屏幕</p>
+
+<p class="ui-r-note _bdc-info">getAppName()</p>
+
+<p>获取包名称</p>
+<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
+
+
+<p class="ui-r-note _bdc-info">getAppName()</p>
+
+<p>构建标识符</p>
+<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
+
+
+<p class="ui-r-note _bdc-info">getAppName()</p>
+
+<p>版本号</p>
+<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
+
 </section>
 <!-- ------------------------------------------- -->
 <section id="code">

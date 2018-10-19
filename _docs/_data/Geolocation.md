@@ -10,19 +10,30 @@
 
 # **[Geolocation](#Geolocation)**
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-Geolocation" target="_blank">cordova-plugin-Geolocation</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-baidumaplocation" target="_blank">cordova-plugin-baidumaplocation</a></p>
 
-> cordova plugin add cordova-plugin-Geolocation
+> cordova plugin add cordova-plugin-baidumaplocation --variable ANDROID_KEY="&#60;API_KEY_ANDROID&#62;" --variable IOS_KEY="&#60;API_KEY_IOS&#62;"
 
-### 提供的剪贴板管理
+<br />
+
+### 使用百度地图获取设备经纬度
+
+<p class="_cl-aaaaaa">应用场景：定位、导航等。</p>
+
++ ~~Browser~~
++ Android
++ iOS
++ ~~WeChat~~
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="Scenes">
+<section id="Methods">
 
-## **[应用场景](#Scenes)**
+## **[方法](#Methods)**
 
-复制粘贴
+<p class="ui-r-note _bdc-info">getCurrentPosition()</p>
+
+获取当前位置
 
 </section>
 <!-- ------------------------------------------- -->
@@ -31,13 +42,23 @@
 ## **[代码实例](#code)**
 
 ```javascript
-Clipboard_Copy: function(){
-  this.$vha.clipboard.copy(this.cpText)
-},
-Clipboard_Paste: function(){
-  this.$vha.clipboard.paste((text) => {
-    this.ptText = text
-    this.logText += "黏贴内容 : " + text + "\n"
+index.html
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=104RLNdEmAqbESLXCa8Beb44oOEeyXPu"></script>
+
+baidumaplocation: function () {
+  this.$vha.baidugeolocation.getCurrentPosition((result) => {
+    this.logText += JSON.stringify(result, null, 2) + "\n"
+    
+    var map = new BMap.Map("baiduMap")
+    var point = new BMap.Point(result.longitude, result.latitude)
+    map.centerAndZoom(point, 14)
+    
+    var myIcon = new BMap.Icon("assets/images/baidulocation.png", new BMap.Size(30, 30))
+    var marker = new BMap.Marker(point, {icon: myIcon})
+    map.addOverlay(marker)
+    
+  }, (error) => {
+    this.logText += "错误" + error + "\n"
   })
 }
 ```

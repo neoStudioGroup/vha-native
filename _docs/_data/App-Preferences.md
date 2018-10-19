@@ -1,6 +1,6 @@
 ---
 {
-  "title": "启动屏幕",
+  "title": "应用配置项",
   "name": "App Preferences",
   "time": "2018-10-18 15:49:13"
 }
@@ -16,7 +16,7 @@
 
 <br />
 
-### 显示或隐藏启动屏幕画面
+### 保存本地选项
 
 <p class="_cl-aaaaaa">应用场景：本地设置</p>
 
@@ -31,14 +31,19 @@
 
 ## **[方法](#Methods)**
 
+<p class="ui-r-note _bdc-info">store()</p>
+
+设置配置
+
+
+<p class="ui-r-note _bdc-info">fetch()</p>
+
+读取配置
+
+
 <p class="ui-r-note _bdc-info">show()</p>
 
-显示启动屏幕
-
-
-<p class="ui-r-note _bdc-info">hide()</p>
-
-隐藏启动屏幕
+显示应用首选项
 
 </section>
 <!-- ------------------------------------------- -->

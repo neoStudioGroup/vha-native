@@ -19,6 +19,9 @@
 
 <h3><strong>事件 (Event)</strong></h3>
 <p class="ui-r-return"><span>↪ 返回值：Promise(any)</span> 复制后返回一个Promise对象</p>
+<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
+<p class="ui-r-return"><span>↪ 返回值：String(any)</span> 回调函数。参数为result</p>
+<p class="ui-r-return"><span>↪ 返回值：Object(any)</span> 对象</p>
 
 <p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
 

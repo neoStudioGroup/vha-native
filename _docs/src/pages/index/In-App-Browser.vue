@@ -55,6 +55,8 @@
 <p class="ui-r-note _bdc-info" id="close">close()</p>
 
 <p>关闭内置浏览器窗口</p>
+<br />
+
 <h3><strong>事件 (Event)</strong></h3>
 <p class="ui-r-note _bdc-success">$rootScope.$on(‘$cordovaInAppBrowser:loadstart’, function(e, event))</p>
 

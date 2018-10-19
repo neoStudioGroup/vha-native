@@ -11,7 +11,7 @@
 </blockquote>
 <br />
 
-<h3>显示或隐藏启动屏幕画面</h3>
+<h3>检测设备上是否安装了某些应用</h3>
 <p class="_cl-aaaaaa">应用场景：更新检测</p>
 
 <ul>
@@ -25,12 +25,9 @@
 <section id="Methods">
 
 <h2><strong><a href="#Methods">方法</a></strong></h2>
-<p class="ui-r-note _bdc-info">show()</p>
+<p class="ui-r-note _bdc-info">check()</p>
 
-<p>显示启动屏幕</p>
-<p class="ui-r-note _bdc-info">hide()</p>
-
-<p>隐藏启动屏幕</p>
+<p>检查</p>
 </section>
 <!-- ------------------------------------------- -->
 <section id="code">
