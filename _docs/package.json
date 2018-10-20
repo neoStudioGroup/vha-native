@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "npm run docs:build && vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "docs:build": "node ./_data/_process_mdTOhtml.js",
-    "docs:genr": "node ./_data/_gen-router.js"
+    "docs:build": "node ./_data/_process_md.js"
   },
   "dependencies": {
     "highlight.js": "^9.13.0",

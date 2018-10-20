@@ -1,11 +1,16 @@
 <template>
   <div class="index_PG-Getting-Started">
-<section id="documentationgetting_started">
+<section id="Getting-Started">
 
-<h1><a href="#documentationgetting_started">Getting Started</a></h1>
-<p><router-link to="/aaa">2222</router-link></p>
+<h1><a href="#Getting-Started">Getting Started</a></h1>
 <br />
 
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
+
+<blockquote>
+<p>cordova plugin add cordova-plugin-chrome</p>
+</blockquote>
+<p><router-link to="/aaa">router-link-aaa</router-link></p>
 <p>Welcome to our API.</p>
 <p>This API document is designed for those interested in developing for our platform.</p>
 <p>This API is still under development anll under development anll under development anll under development anll under development anll under development anll under development anll under development and will evolve.</p>
@@ -24,18 +29,12 @@
 <p class="ui-r-return"><span>↪ 返回值：Object(any)</span> 对象</p>
 <p class="ui-r-return"><span>↪ 返回值：Boolean</span> 布尔型</p>
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
-
-<blockquote>
-<p>cordova plugin add cordova-plugin-chrome</p>
-</blockquote>
 <dl>
   <dt>title</dt>
   <dd>The title for the book</dd>
   <dt>score</dt>
   <dd>The book's score between 0 and 5</dd>
 </dl>
-
 
 <table>
 <thead>
@@ -104,9 +103,9 @@
 }</code></pre>
 </section>
 <!-- ------------------------------------------- -->
-<section id="documentationauthentication">
+<section id="Authentication">
 
-<h1><a href="#documentationauthentication">Authentication</a></h1>
+<h1><a href="#Authentication">Authentication</a></h1>
 <p>222222222</p>
 <p>222222222</p>
 <p>222222222</p>
@@ -138,9 +137,9 @@
 <p>222222222</p>
 </section>
 <!-- ------------------------------------------- -->
-<section id="documentationerrors">
+<section id="Errors">
 
-<h1><a href="#documentationerrors">Errors</a></h1>
+<h1><a href="#Errors">Errors</a></h1>
 <p>333333333</p>
 <p>333333333</p>
 <p>333333333</p>

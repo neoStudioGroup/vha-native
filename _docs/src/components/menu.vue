@@ -126,6 +126,7 @@ export default {
       })
       
       window.history.replaceState({}, null, '#' + this.nowElement.id)
+      // window.document.title = this.nowElement.id
     },
     handleScroll: function () {
       // 滚动处理

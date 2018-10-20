@@ -1,16 +1,22 @@
 ---
 {
   "title": "快速开始",
-  "name": "Getting Started",
+  "name": "Getting-Started",
   "time": "2018-10-17 16:33:09"
 }
 ---
-<!-- ------------------------------------------- -->
-<section id="documentationgetting_started">
 
-# **[Getting Started](#documentationgetting_started)**
+<section id="Getting-Started">
 
-<router-link to="/aaa">2222</router-link>
+# [Getting Started](#Getting-Started)
+
+<br />
+
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
+
+> cordova plugin add cordova-plugin-chrome
+
+<router-link to="/aaa">router-link-aaa</router-link>
 
 Welcome to our API.
 
@@ -19,6 +25,7 @@ This API document is designed for those interested in developing for our platfor
 This API is still under development anll under development anll under development anll under development anll under development anll under development anll under development anll under development and will evolve.
 
 This API is still under development and will evolve.
+
 <p class="_cl-aaaaaa">You’ll succeed if you do this.</p>
 
 <p class="ui-r-note _bdc-success">You’ll succeed if you do this.</p>
@@ -26,9 +33,13 @@ This API is still under development and will evolve.
 <p class="ui-r-note _bdc-warning">Something may not happen if you try and do this.</p>
 <p class="ui-r-note _bdc-error">Something bad will happen if you do this.</p>
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
+### **事件 (Event)**
 
-> cordova plugin add cordova-plugin-chrome
+<p class="ui-r-return"><span>↪ 返回值：Promise(any)</span> 复制后返回一个Promise对象</p>
+<p class="ui-r-return"><span>↪ 返回值：Function(any)</span> 回调函数。参数为result</p>
+<p class="ui-r-return"><span>↪ 返回值：String(any)</span> 回调函数。参数为result</p>
+<p class="ui-r-return"><span>↪ 返回值：Object(any)</span> 对象</p>
+<p class="ui-r-return"><span>↪ 返回值：Boolean</span> 布尔型</p>
 
 <dl>
   <dt>title</dt>
@@ -37,82 +48,18 @@ This API is still under development and will evolve.
   <dd>The book's score between 0 and 5</dd>
 </dl>
 
+参数|类型|说明
+-|-|-
+networkState|String|网络连接类型
+networkState|String|网络连接类型
+networkState|String|网络连接类型
+
 Code|Name|Description
 -|-|-
 200|OK|Success
 201|Created|Creation Successful
 400|Bad Request|We could not process that action
 403|Forbidden|We couldn’t authenticate you
-
-</section>
-<!-- ------------------------------------------- -->
-<section id="documentationauthentication">
-
-# [Authentication](#documentationauthentication)
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-222222222
-
-</section>
-<!-- ------------------------------------------- -->
-<section id="documentationerrors">
-
-# [Errors](#documentationerrors)
 
 ```javascript
 StatusBaroverlaysWebView: function () {
@@ -128,6 +75,76 @@ StatusBaroverlaysWebView: function () {
   }
 }
 ```
+
+</section>
+<!-- ------------------------------------------- -->
+<section id="Authentication">
+
+# [Authentication](#Authentication)
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+222222222
+
+</section>
+<!-- ------------------------------------------- -->
+<section id="Errors">
+
+# [Errors](#Errors)
 
 333333333
 

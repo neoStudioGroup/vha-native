@@ -6,13 +6,17 @@
 }
 ---
 
-<section id="documentationgetting_started">
+<section id="Getting-Started">
 
-# [Getting Started](#documentationgetting_started)
-
-<router-link to="/aaa">2222</router-link>
+# [Getting Started](#Getting-Started)
 
 <br />
+
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
+
+> cordova plugin add cordova-plugin-chrome
+
+<router-link to="/aaa">router-link-aaa</router-link>
 
 Welcome to our API.
 
@@ -37,10 +41,6 @@ This API is still under development and will evolve.
 <p class="ui-r-return"><span>↪ 返回值：Object(any)</span> 对象</p>
 <p class="ui-r-return"><span>↪ 返回值：Boolean</span> 布尔型</p>
 
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-tcp" target="_blank">cordova-plugin-chrome-apps-sockets-tcp</a></p>
-
-> cordova plugin add cordova-plugin-chrome
-
 <dl>
   <dt>title</dt>
   <dd>The title for the book</dd>
@@ -48,13 +48,11 @@ This API is still under development and will evolve.
   <dd>The book's score between 0 and 5</dd>
 </dl>
 
-
 参数|类型|说明
 -|-|-
 networkState|String|网络连接类型
 networkState|String|网络连接类型
 networkState|String|网络连接类型
-
 
 Code|Name|Description
 -|-|-
@@ -62,8 +60,6 @@ Code|Name|Description
 201|Created|Creation Successful
 400|Bad Request|We could not process that action
 403|Forbidden|We couldn’t authenticate you
-
-
 
 ```javascript
 StatusBaroverlaysWebView: function () {
@@ -82,9 +78,9 @@ StatusBaroverlaysWebView: function () {
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="documentationauthentication">
+<section id="Authentication">
 
-# [Authentication](#documentationauthentication)
+# [Authentication](#Authentication)
 
 222222222
 
@@ -146,10 +142,9 @@ StatusBaroverlaysWebView: function () {
 
 </section>
 <!-- ------------------------------------------- -->
-<section id="documentationerrors">
+<section id="Errors">
 
-# [Errors](#documentationerrors)
-
+# [Errors](#Errors)
 
 333333333
 
