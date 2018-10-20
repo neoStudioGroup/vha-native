@@ -11,8 +11,8 @@
 </blockquote>
 <br />
 
-<h3>显示或隐藏启动屏幕画面</h3>
-<p class="_cl-aaaaaa">应用场景：启动缓冲。</p>
+<h3>显示一个系统提示对话框(类似alert)</h3>
+<p class="_cl-aaaaaa">应用场景：信息交互。</p>
 
 <ul>
 <li>Browser</li>
@@ -159,7 +159,7 @@ prompt: function(){
 <!-- ------------------------------------------- -->
     <section id="lastSection" class="_df _jcsb">
       <a class="ui-r-a" href="https://github.com/neoStudioGroup/vha-native/blob/master/_docs/_data/Dialogs.md" target="_blank">在 GitHub 上编辑此页</a>
-      <span>上次更新：2018-10-18 15:49:13</span>
+      <span>上次更新：2018-10-20 15:59:49</span>
     </section>
   </div>
 </template>
