@@ -18,7 +18,7 @@ module.exports = {
         staticDir: path.join(__dirname, '..') + '\\docs',
         routes: [
           '/', 
-          '/Getting-Started', 
+          '/GettingStarted', 
           
           // 系统 System
           '/Splashscreen', 
@@ -65,7 +65,7 @@ module.exports = {
           // 在这里配置每个页面的标题
           var titles = {
             '/': 'vha-native 文档', 
-            '/Getting-Started': '快速开始 vha-native 文档'
+            '/GettingStarted': '快速开始 vha-native 文档'
           }
           let temp_title = titles[context.route]
           if (!temp_title) {

@@ -54,11 +54,11 @@ export default new Router({
     { 
       path: '/',
       component: index,
-      redirect: '/Getting-Started',
+      redirect: '/GettingStarted',
       children: [
         {
-          path: '/Getting-Started',
-          name: 'Getting-Started',
+          path: '/GettingStarted',
+          name: 'GettingStarted',
           component: GettingStarted
         },
         

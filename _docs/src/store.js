@@ -79,7 +79,7 @@ export default new Vuex.Store({
             text: '快速开始',
             note: 'Getting Started',
             noteClass: '',
-            href: '/Getting-Started',
+            href: '/GettingStarted',
             select: false,
             showItem: false,
             item: [
