@@ -2,9 +2,9 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof cordova.file != 'undefined') {
+        if (typeof window.cordova.file != 'undefined') {
           Vue.prototype.$vha.file = {
-            const: cordova.file,
+            const: window.cordova.file,
             errorCode: {
               1: 'NOT_FOUND_ERR',
               2: 'SECURITY_ERR',
@@ -606,7 +606,7 @@ const vha = {
             }
           }
         } else {
-          throw "cordova-plugin-file undefined"
+          throw "cordova-plugin-file"
         }
       }
       catch (err) {

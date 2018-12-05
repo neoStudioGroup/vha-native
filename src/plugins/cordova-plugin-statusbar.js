@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof StatusBar != 'undefined') {
-          Vue.prototype.$vha.statusbar = StatusBar
+        if (typeof window.StatusBar != 'undefined') {
+          Vue.prototype.$vha.statusbar = window.StatusBar
         } else {
-          throw "cordova-plugin-statusbar undefined"
+          throw "cordova-plugin-statusbar"
         }
       }
       catch (err) {

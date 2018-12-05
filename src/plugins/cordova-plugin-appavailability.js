@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.appAvailability != 'undefined') {
           Vue.prototype.$vha.appavailability = window.appAvailability
         } else {
-          throw "cordova-plugin-appavailability undefined"
+          throw "cordova-plugin-appavailability"
         }
       }
       catch (err) {

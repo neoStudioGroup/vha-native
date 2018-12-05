@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof cordova.InAppBrowser != 'undefined') {
-          Vue.prototype.$vha.inappbrowser = cordova.InAppBrowser
+        if (typeof window.cordova.InAppBrowser != 'undefined') {
+          Vue.prototype.$vha.inappbrowser = window.cordova.InAppBrowser
         } else {
-          throw "cordova-plugin-inappbrowser undefined"
+          throw "cordova-plugin-inappbrowser"
         }
       }
       catch (err) {

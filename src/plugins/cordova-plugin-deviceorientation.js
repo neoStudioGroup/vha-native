@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.compass != 'undefined') {
-          Vue.prototype.$vha.deviceorientation = navigator.compass
+        if (typeof window.navigator.compass != 'undefined') {
+          Vue.prototype.$vha.deviceorientation = window.navigator.compass
         } else {
-          throw "cordova-plugin-device-orientation undefined"
+          throw "cordova-plugin-device-orientation"
         }
       }
       catch (err) {

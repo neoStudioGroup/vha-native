@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.device != 'undefined') {
           Vue.prototype.$vha.device = window.device
         } else {
-          throw "cordova-plugin-device undefined"
+          throw "cordova-plugin-device"
         }
       }
       catch (err) {

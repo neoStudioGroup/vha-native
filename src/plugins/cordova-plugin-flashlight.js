@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.plugins.flashlight != 'undefined') {
           Vue.prototype.$vha.flashlight = window.plugins.flashlight
         } else {
-          throw "cordova-plugin-flashlight undefined"
+          throw "cordova-plugin-flashlight"
         }
       }
       catch (err) {

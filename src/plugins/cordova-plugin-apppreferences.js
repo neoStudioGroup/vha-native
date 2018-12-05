@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.plugins.appPreferences != 'undefined') {
           Vue.prototype.$vha.apppreferences = window.plugins.appPreferences
         } else {
-          throw "cordova-plugin-app-preferences undefined"
+          throw "cordova-plugin-app-preferences"
         }
       }
       catch (err) {

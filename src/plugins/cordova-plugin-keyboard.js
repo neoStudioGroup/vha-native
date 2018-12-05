@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.Keyboard != 'undefined') {
           Vue.prototype.$vha.keyboard = window.Keyboard
         } else {
-          throw "cordova-plugin-keyboard undefined"
+          throw "cordova-plugin-keyboard"
         }
       }
       catch (err) {

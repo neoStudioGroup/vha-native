@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.MediaPicker != 'undefined') {
           Vue.prototype.$vha.mediapicker = window.MediaPicker
         } else {
-          throw "cordova-plugin-vha-mediapicker undefined"
+          throw "cordova-plugin-vha-mediapicker"
         }
       }
       catch (err) {

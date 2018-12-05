@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.ble != 'undefined') {
           Vue.prototype.$vha.bluetooth = window.ble
         } else {
-          throw "cordova-plugin-ble-central undefined"
+          throw "cordova-plugin-ble-central"
         }
       }
       catch (err) {

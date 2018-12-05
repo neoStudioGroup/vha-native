@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.sqlitePlugin != 'undefined') {
           Vue.prototype.$vha.sqlite = window.sqlitePlugin
         } else {
-          throw "cordova-sqlite-storage undefined"
+          throw "cordova-sqlite-storage"
         }
       }
       catch (err) {

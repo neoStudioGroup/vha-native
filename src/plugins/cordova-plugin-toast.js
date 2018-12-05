@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof plugins.toast != 'undefined') {
-          Vue.prototype.$vha.toast = plugins.toast
+        if (typeof window.plugins.toast != 'undefined') {
+          Vue.prototype.$vha.toast = window.plugins.toast
         } else {
-          throw "cordova-plugin-x-toast undefined"
+          throw "cordova-plugin-x-toast"
         }
       }
       catch (err) {

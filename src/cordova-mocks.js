@@ -19,6 +19,338 @@ if (!window.plugins) {
     window.plugins = {};
 }
 
+if (!window.cordova) {
+  window.cordova = {};
+}
+
+if (!window.cordova.plugins) {
+  window.cordova.plugins = {};
+}
+
+/****************************************************************
+ * 11111111
+ */
+
+window.aaaaaaaaa = {
+  show: function () {
+    alert('Cordova mocks: Called show')
+  },
+  hide: function () {
+    alert('Cordova mocks: Called hide')
+  }
+}
+
+/****************************************************************
+ * app
+ */
+
+window.navigator.app = {
+  exitApp: function () {
+    alert('Cordova mocks: Called exitApp')
+  }
+}
+
+/****************************************************************
+ * splashscreen
+ */
+
+window.navigator.splashscreen = {
+  show: function () {
+    alert('Cordova mocks: 调用显示启动屏幕')
+  },
+  hide: function () {
+    alert('Cordova mocks: 调用隐藏启动屏幕')
+  }
+}
+
+/****************************************************************
+ * splashscreen
+ */
+
+window.StatusBar = {
+  overlaysWebView: function () {
+    alert('Cordova mocks: Called overlaysWebView ')
+  },
+  styleDefault: function () {
+    alert('Cordova mocks: Called styleDefault')
+  },
+  styleLightContent: function () {
+    alert('Cordova mocks: Called styleLightContent')
+  },
+  styleBlackTranslucent: function () {
+    alert('Cordova mocks: Called styleBlackTranslucent')
+  },
+  styleBlackOpaque: function () {
+    alert('Cordova mocks: Called styleBlackOpaque')
+  },
+  backgroundColorByName: function () {
+    alert('Cordova mocks: Called backgroundColorByName')
+  },
+  backgroundColorByHexString: function () {
+    alert('Cordova mocks: Called backgroundColorByHexString')
+  },
+  show: function () {
+    alert('Cordova mocks: Called show')
+  },
+  hide: function () {
+    alert('Cordova mocks: Called hide')
+  }
+}
+
+/****************************************************************
+ * badge
+ */
+
+window.cordova.plugins.notification = {}
+window.cordova.plugins.notification.badge = {
+  hasPermission: function () {
+    alert('Cordova mocks: Called hasPermission')
+  },
+  set: function () {
+    alert('Cordova mocks: Called set')
+  },
+  get: function () {
+    alert('Cordova mocks: Called get')
+  },
+  clear: function () {
+    alert('Cordova mocks: Called clear')
+  },
+  increase: function () {
+    alert('Cordova mocks: Called increase')
+  },
+  decrease: function () {
+    alert('Cordova mocks: Called decrease')
+  }
+}
+
+/****************************************************************
+ * clipboard
+ */
+
+window.cordova.plugins.clipboard = {
+  copy: function () {
+    alert('Cordova mocks: Called copy')
+  },
+  paste: function () {
+    alert('Cordova mocks: Called paste')
+  }
+}
+
+/****************************************************************
+ * file
+ */
+
+window.cordova.file = {
+}
+
+/****************************************************************
+ * fileOpener2
+ */
+
+window.cordova.plugins.fileOpener2 = {
+  open: function () {
+    alert('Cordova mocks: Called open')
+  },
+  uninstall: function () {
+    alert('Cordova mocks: Called uninstall')
+  },
+  appIsInstalled: function () {
+    alert('Cordova mocks: Called appIsInstalled')
+  }
+}
+
+/****************************************************************
+ * NativeAudio
+ */
+
+window.plugins.NativeAudio = {
+  preloadSimple: function () {
+    alert('Cordova mocks: Called preloadSimple')
+  },
+  play: function () {
+    alert('Cordova mocks: Called play')
+  },
+  loop: function () {
+    alert('Cordova mocks: Called loop')
+  },
+  stop: function () {
+    alert('Cordova mocks: Called stop')
+  }
+}
+
+/****************************************************************
+ * sms
+ */
+
+window.sms = {
+  send: function () {
+    alert('Cordova mocks: Called send')
+  }
+}
+
+/****************************************************************
+ * InAppBrowser
+ */
+
+window.cordova.InAppBrowser = {
+  open: function () {
+    alert('Cordova mocks: Called open')
+  }
+}
+
+/****************************************************************
+ * zip
+ */
+
+window.zip = {
+  unzip: function () {
+    alert('Cordova mocks: Called unzip')
+  }
+}
+
+/****************************************************************
+ * getAppVersion
+ */
+
+window.cordova.getAppVersion = {
+  getAppName: function () {
+    alert('Cordova mocks: Called getAppName')
+  },
+  getPackageName: function () {
+    alert('Cordova mocks: Called getPackageName')
+  },
+  getVersionCode: function () {
+    alert('Cordova mocks: Called getVersionCode')
+  },
+  getVersionNumber: function () {
+    alert('Cordova mocks: Called getVersionNumber')
+  }
+}
+
+/****************************************************************
+ * appAvailability
+ */
+
+window.appAvailability = {
+  check: function () {
+    alert('Cordova mocks: Called check')
+  }
+}
+
+/****************************************************************
+ * AppRate
+ */
+
+window.AppRate = {
+  promptForRating: function () {
+    alert('Cordova mocks: Called promptForRating')
+  }
+}
+
+/****************************************************************
+ * appPreferences
+ */
+
+window.plugins.appPreferences = {
+  store: function () {
+    alert('Cordova mocks: Called store')
+  },
+  fetch: function () {
+    alert('Cordova mocks: Called fetch')
+  },
+  show: function () {
+    alert('Cordova mocks: Called show')
+  }
+}
+
+/****************************************************************
+ * MediaPicker
+ */
+
+window.MediaPicker = {
+  getMedias: function () {
+    alert('Cordova mocks: Called getMedias')
+  },
+  compressImage: function () {
+    alert('Cordova mocks: Called compressImage')
+  }
+}
+
+/****************************************************************
+ * capture
+ */
+
+window.navigator.device = {}
+window.navigator.device.capture = {
+  captureVideo: function () {
+    alert('Cordova mocks: Called captureVideo')
+  }
+}
+
+/****************************************************************
+ * barcodeScanner
+ */
+
+window.cordova.plugins.barcodeScanner = {
+  scan: function () {
+    alert('Cordova mocks: Called scan')
+  },
+  encode: function () {
+    alert('Cordova mocks: Called encode')
+  }
+}
+
+/****************************************************************
+ * locationManager
+ */
+
+window.cordova.plugins.locationManager = {
+  isBluetoothEnabled: function () {
+    alert('Cordova mocks: Called isBluetoothEnabled')
+  }
+}
+
+/****************************************************************
+ * ble central
+ */
+
+window.ble = {
+  enable: function () {
+    alert('Cordova mocks: Called enable')
+  },
+  scan: function () {
+    alert('Cordova mocks: Called scan')
+  },
+  connect: function () {
+    alert('Cordova mocks: Called connect')
+  },
+  read: function () {
+    alert('Cordova mocks: Called read')
+  },
+  disconnect: function () {
+    alert('Cordova mocks: Called disconnect')
+  }
+}
+
+/****************************************************************
+ * sqlite
+ */
+
+window.sqlitePlugin = {
+  echoTest: function () {
+    alert('Cordova mocks: Called echoTest')
+  },
+  selfTest: function () {
+    alert('Cordova mocks: Called selfTest')
+  },
+  openDatabase: function () {
+    alert('Cordova mocks: Called openDatabase')
+  }
+}
+
+
+
+
 /****************************************************************
  * Barcode Scanner
  * link :   https://github.com/wildabeast/BarcodeScanner
@@ -39,7 +371,6 @@ barcodeScanner.scan = function (successCallback, errorCallback) {
 
 cordova.plugins.barcodeScanner = barcodeScanner;
  */
-
 
 /****************************************************************
  * Camera

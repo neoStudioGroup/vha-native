@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.device.capture != 'undefined') {
-          Vue.prototype.$vha.capture = navigator.device.capture
+        if (typeof window.navigator.device.capture != 'undefined') {
+          Vue.prototype.$vha.capture = window.navigator.device.capture
         } else {
-          throw "cordova-plugin-media-capture undefined"
+          throw "cordova-plugin-media-capture"
         }
       }
       catch (err) {

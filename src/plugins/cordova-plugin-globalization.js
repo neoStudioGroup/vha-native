@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.globalization != 'undefined') {
-          Vue.prototype.$vha.globalization = navigator.globalization
+        if (typeof window.navigator.globalization != 'undefined') {
+          Vue.prototype.$vha.globalization = window.navigator.globalization
         } else {
-          throw "cordova-plugin-globalization undefined"
+          throw "cordova-plugin-globalization"
         }
       }
       catch (err) {

@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.plugins.NativeAudio != 'undefined') {
           Vue.prototype.$vha.nativeaudio = window.plugins.NativeAudio
         } else {
-          throw "cordova-plugin-nativeaudio undefined"
+          throw "cordova-plugin-nativeaudio"
         }
       }
       catch (err) {

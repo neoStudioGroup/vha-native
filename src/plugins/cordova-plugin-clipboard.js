@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof cordova.plugins.clipboard != 'undefined') {
-          Vue.prototype.$vha.clipboard = cordova.plugins.clipboard
+        if (typeof window.cordova.plugins.clipboard != 'undefined') {
+          Vue.prototype.$vha.clipboard = window.cordova.plugins.clipboard
         } else {
-          throw "cordova-plugin-vha-clipboard undefined"
+          throw "cordova-plugin-vha-clipboard"
         }
       }
       catch (err) {

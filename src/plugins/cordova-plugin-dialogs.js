@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.notification != 'undefined') {
-          Vue.prototype.$vha.dialogs = navigator.notification
+        if (typeof window.navigator.notification != 'undefined') {
+          Vue.prototype.$vha.dialogs = window.navigator.notification
         } else {
-          throw "cordova-plugin-dialogs undefined"
+          throw "cordova-plugin-dialogs"
         }
       }
       catch (err) {

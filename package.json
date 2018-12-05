@@ -1,6 +1,6 @@
 {
   "name": "vha-native",
-  "version": "0.0.12",
+  "version": "0.0.8",
   "description": "Vue.js plugin for Cordova",
   "main": "index.js",
   "scripts": {

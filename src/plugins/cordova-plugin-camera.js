@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.camera != 'undefined') {
-          Vue.prototype.$vha.camera = navigator.camera
+        if (typeof window.navigator.camera != 'undefined') {
+          Vue.prototype.$vha.camera = window.navigator.camera
         } else {
-          throw "cordova-plugin-camera undefined"
+          throw "cordova-plugin-camera"
         }
       }
       catch (err) {

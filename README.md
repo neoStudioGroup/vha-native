@@ -36,7 +36,7 @@ import vhaNative from 'vha-native'
 Vue.use(vhaNative)
 ```
 
-添加device插件(或者直接在vhaGUI中选择插件)
+添加device插件（或直接在vha构建平台中选择插件）
 
 ```shell
 cordova plugin add cordova-plugin-device
@@ -53,6 +53,3 @@ console.log(this.$vha.device)
 [完整的演示app](https://github.com/neoStudioGroup/vha-appDemo)
 
 [apk文件](https://github.com/neoStudioGroup/vha-appDemo/releases/download/0.0.2/vha-appDemo.apk)
-
-
-Thanks vue-cordova ngCordova

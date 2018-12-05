@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.AppRate != 'undefined') {
           Vue.prototype.$vha.apprate = window.AppRate
         } else {
-          throw "cordova-plugin-apprate undefined"
+          throw "cordova-plugin-apprate"
         }
       }
       catch (err) {

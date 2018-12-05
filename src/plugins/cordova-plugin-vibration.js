@@ -2,10 +2,10 @@ const vha = {
   install(Vue, options) {
     document.addEventListener('deviceready', () => {
       try {
-        if (typeof navigator.vibrate != 'undefined') {
-          Vue.prototype.$vha.vibration = navigator
+        if (typeof window.navigator.vibrate != 'undefined') {
+          Vue.prototype.$vha.vibration = window.navigator
         } else {
-          throw "cordova-plugin-vibration undefined"
+          throw "cordova-plugin-vibration"
         }
       }
       catch (err) {

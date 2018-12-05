@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.zip != 'undefined') {
           Vue.prototype.$vha.zip = window.zip
         } else {
-          throw "cordova-plugin-zip undefined"
+          throw "cordova-plugin-zip"
         }
       }
       catch (err) {

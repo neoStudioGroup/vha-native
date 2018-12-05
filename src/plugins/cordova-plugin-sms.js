@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.sms != 'undefined') {
           Vue.prototype.$vha.sms = window.sms
         } else {
-          throw "cordova-sms-plugin undefined"
+          throw "cordova-sms-plugin"
         }
       }
       catch (err) {

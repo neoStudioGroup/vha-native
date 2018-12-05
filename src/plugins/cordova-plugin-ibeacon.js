@@ -5,7 +5,7 @@ const vha = {
         if (typeof window.cordova.plugins.locationManager != 'undefined') {
           Vue.prototype.$vha.ibeacon = window.cordova.plugins.locationManager
         } else {
-          throw "cordova-plugin-ibeacon undefined"
+          throw "cordova-plugin-ibeacon"
         }
       }
       catch (err) {
