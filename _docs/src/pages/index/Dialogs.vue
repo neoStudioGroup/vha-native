@@ -11,7 +11,7 @@
 </blockquote>
 <br />
 
-<h3>显示一个系统提示对话框(类似alert)</h3>
+<h3>显示一个系统提示对话框 (类似alert)</h3>
 <p class="_cl-aaaaaa">应用场景：信息交互。</p>
 
 <ul>

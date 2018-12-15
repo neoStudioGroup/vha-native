@@ -61,20 +61,24 @@ module.exports = {
           '/AppLogin', 
           '/SQLite'
         ],
-        postProcessHtml: function (context) {
+        postProcess(context) {
           // 在这里配置每个页面的标题
-          var titles = {
-            '/': 'vha-native 文档', 
-            '/GettingStarted': '快速开始 vha-native 文档'
+          let titles = {
+            '/': 'vha-native 接口文档',
+            '/GettingStarted': '快速开始 - vha-native 接口文档'
           }
+          
           let temp_title = titles[context.route]
+          // 如果在titles内没找到title就用context.route里的title
           if (!temp_title) {
-            temp_title = context.route.replace(/\//g, '').replace(/-/g, ' ') + ' vha-native 文档'
+            temp_title = context.route.replace(/\//g, '').replace(/-/g, ' ') + ' - vha-native 接口文档'
           }
-          return context.html.replace(
+          
+          context.html = context.html.replace(
             /<title>[^<]*<\/title>/i,
-            '<title>' + temp_title + '</title>'
+            `<title>${temp_title}</title>`
           )
+          return context
         }
       })
     ]

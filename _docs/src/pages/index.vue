@@ -12,7 +12,7 @@
   ._UI-menu
     width 240px
     border-right 1px solid lineCl
-    background-color #fbfbfb
+    background-color #fefefe
     .ui-l-title
       cursor pointer
       padding 0 20px

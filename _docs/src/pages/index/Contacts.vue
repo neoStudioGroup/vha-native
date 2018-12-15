@@ -4,10 +4,10 @@
 <section id="Contacts">
 
 <h1><strong><a href="#Contacts">Contacts</a></strong></h1>
-<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-contacts" target="_blank">cordova-plugin-contacts</a></p>
+<p><a class="ui-r-npm" href="https://www.npmjs.com/package/cordova-plugin-vha-contacts" target="_blank">cordova-plugin-vha-contacts</a></p>
 
 <blockquote>
-<p>cordova plugin add cordova-plugin-contacts</p>
+<p>cordova plugin add cordova-plugin-vha-contacts</p>
 </blockquote>
 <br />
 

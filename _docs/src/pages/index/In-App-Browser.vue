@@ -44,7 +44,7 @@
 <tr>
 <td>target</td>
 <td>String</td>
-<td>三种加载URL（<em>self，</em>blank，_system）</td>
+<td>三种加载URL（_self，_blank，_system）</td>
 </tr>
 <tr>
 <td>options</td>
