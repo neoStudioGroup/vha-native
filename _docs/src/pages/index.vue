@@ -119,7 +119,7 @@
         margin 0 0 20px 0
         border-collapse collapse
         td, th
-          border 1px solid #ccc
+          1px solid #ddd
           padding 10px
           font-size .9em
           text-align left
@@ -171,12 +171,12 @@
         margin-right -15px
         background-color #FAFAFA
         border-radius 2px
-      ._bdc-info
         font-weight bold
   
   //UI组件-侧边栏
   ._UI-sidebar
     padding 20px
+    border-left 1px solid #eee
     .ui-s-phone
       padding 90px 12px
       height 100%
@@ -184,10 +184,14 @@
       background-image url('../assets/images/phone-case.png')
       background-repeat no-repeat
       background-size 100%
+      .ui-s-p-if
+        border-radius 6px
+        overflow hidden
+        transform translateY(0px) 
       iframe
         width 375px
         height 667px
-        border-radius 6px
+        transition all 0s
 
 </style>
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
